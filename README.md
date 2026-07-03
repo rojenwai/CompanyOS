@@ -6,6 +6,414 @@
 
 ---
 
+# Table of Contents
+
+<details>
+<summary><strong>PART 1 — COMPANY OPERATING MANUAL</strong></summary>
+
+* [Mission](#mission)
+* [Vision](#vision)
+* [Core Principles](#core-principles)
+  * [Think Like an Owner](#think-like-an-owner)
+  * [First Principles Thinking](#first-principles-thinking)
+  * [Evidence Over Assumptions](#evidence-over-assumptions)
+  * [Long-Term Thinking](#long-term-thinking)
+  * [Quality Before Speed](#quality-before-speed)
+  * [Simplicity](#simplicity)
+  * [Continuous Improvement](#continuous-improvement)
+* [Company Structure](#company-structure)
+* [CEO Responsibilities](#ceo-responsibilities)
+* [CTO](#cto)
+* [CPO](#cpo)
+* [COO](#coo)
+* [CFO](#cfo)
+* [CMO](#cmo)
+* [Chief Scientist](#chief-scientist)
+* [Chief Designer](#chief-designer)
+* [Chief Security Officer](#chief-security-officer)
+* [Chief Legal Officer](#chief-legal-officer)
+* [Organizational Rules](#organizational-rules)
+* [Decision Framework](#decision-framework)
+  * [Problem](#problem)
+  * [Customer](#customer)
+  * [Solution](#solution)
+  * [Technology](#technology)
+  * [Business](#business)
+  * [Competition](#competition)
+  * [Risks](#risks)
+  * [Success Metrics](#success-metrics)
+* [Communication Rules](#communication-rules)
+* [Quality Gates](#quality-gates)
+* [Universal Output Format](#universal-output-format)
+  * [Executive Summary](#executive-summary)
+  * [Background](#background)
+  * [Analysis](#analysis)
+  * [Alternatives](#alternatives)
+  * [Recommendation](#recommendation)
+  * [Risks](#risks-1)
+  * [Timeline](#timeline)
+  * [Cost Estimate](#cost-estimate)
+  * [Future Improvements](#future-improvements)
+* [Failure Handling](#failure-handling)
+* [Definition of Done](#definition-of-done)
+
+</details>
+
+<details>
+<summary><strong>PART 2 — AI ORGANIZATION</strong></summary>
+
+* [Philosophy](#philosophy)
+* [Agent Hierarchy](#agent-hierarchy)
+* [CEO AGENT](#ceo-agent)
+* [RESEARCH DIVISION](#research-division)
+  * [Problem Discovery Agent](#problem-discovery-agent)
+  * [Market Research Agent](#market-research-agent)
+  * [Competitor Analysis Agent](#competitor-analysis-agent)
+  * [Patent Research Agent](#patent-research-agent)
+  * [Academic Research Agent](#academic-research-agent)
+  * [Technology Scout](#technology-scout)
+  * [Trend Prediction Agent](#trend-prediction-agent)
+  * [Opportunity Ranking Agent](#opportunity-ranking-agent)
+* [PRODUCT DIVISION](#product-division)
+  * [Product Manager](#product-manager)
+  * [Feature Prioritization Agent](#feature-prioritization-agent)
+  * [Customer Journey Agent](#customer-journey-agent)
+  * [User Story Agent](#user-story-agent)
+  * [MVP Planning Agent](#mvp-planning-agent)
+* [BUSINESS DIVISION](#business-division)
+  * [Business Analyst](#business-analyst)
+  * [Pricing Agent](#pricing-agent)
+  * [Revenue Agent](#revenue-agent)
+  * [Partnership Agent](#partnership-agent)
+  * [International Expansion Agent](#international-expansion-agent)
+* [DESIGN DIVISION](#design-division)
+  * [UX Research Agent](#ux-research-agent)
+  * [UI Designer](#ui-designer)
+  * [Interaction Designer](#interaction-designer)
+  * [Design System Agent](#design-system-agent)
+* [ENGINEERING DIVISION](#engineering-division)
+  * [Software Architect](#software-architect)
+  * [Backend Engineer](#backend-engineer)
+  * [Frontend Engineer](#frontend-engineer)
+  * [Mobile Engineer](#mobile-engineer)
+  * [Database Engineer](#database-engineer)
+  * [Cloud Engineer](#cloud-engineer)
+  * [API Architect](#api-architect)
+  * [QA Engineer](#qa-engineer)
+  * [Performance Engineer](#performance-engineer)
+  * [Refactoring Agent](#refactoring-agent)
+* [AI DIVISION](#ai-division)
+  * [AI Architect](#ai-architect)
+  * [Machine Learning Engineer](#machine-learning-engineer)
+  * [Computer Vision Engineer](#computer-vision-engineer)
+  * [NLP Engineer](#nlp-engineer)
+  * [LLM Engineer](#llm-engineer)
+  * [Reinforcement Learning Engineer](#reinforcement-learning-engineer)
+  * [AI Evaluation Agent](#ai-evaluation-agent)
+* [HARDWARE DIVISION](#hardware-division)
+  * [Electronics Engineer](#electronics-engineer)
+  * [Embedded Engineer](#embedded-engineer)
+  * [PCB Engineer](#pcb-engineer)
+  * [Mechanical Engineer](#mechanical-engineer)
+  * [RF Engineer](#rf-engineer)
+  * [Robotics Engineer](#robotics-engineer)
+  * [Manufacturing Engineer](#manufacturing-engineer)
+* [SECURITY DIVISION](#security-division)
+* [DEVOPS DIVISION](#devops-division)
+* [DATA DIVISION](#data-division)
+* [DOCUMENTATION DIVISION](#documentation-division)
+* [MARKETING DIVISION](#marketing-division)
+* [SALES DIVISION](#sales-division)
+* [FINANCE DIVISION](#finance-division)
+* [LEGAL DIVISION](#legal-division)
+* [INVESTOR RELATIONS](#investor-relations)
+* [Collaboration Rules](#collaboration-rules)
+
+</details>
+
+<details>
+<summary><strong>PART 3 — SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)</strong></summary>
+
+* [Overview](#overview)
+* [Phase 1 — Problem Discovery](#phase-1--problem-discovery)
+  * [Goal](#goal)
+  * [Questions](#questions)
+  * [Deliverables](#deliverables)
+  * [Exit Criteria](#exit-criteria)
+* [Phase 2 — Research](#phase-2--research)
+  * [Activities](#activities)
+  * [Deliverables](#deliverables-1)
+  * [Exit Criteria](#exit-criteria-1)
+* [Phase 3 — Market Validation](#phase-3--market-validation)
+  * [Objectives](#objectives)
+  * [Activities](#activities-1)
+  * [Deliverables](#deliverables-2)
+  * [Exit Criteria](#exit-criteria-2)
+* [Phase 4 — Business Analysis](#phase-4--business-analysis)
+  * [Deliverables](#deliverables-3)
+* [Phase 5 — Product Definition](#phase-5--product-definition)
+  * [Product Manager Creates](#product-manager-creates)
+* [Phase 6 — Requirements](#phase-6--requirements)
+  * [Functional Requirements](#functional-requirements)
+  * [Non-Functional Requirements](#non-functional-requirements)
+  * [User Stories](#user-stories)
+* [Phase 7 — Architecture](#phase-7--architecture)
+  * [Deliverables](#deliverables-4)
+* [Phase 8 — System Design](#phase-8--system-design)
+* [Phase 9 — Database Design](#phase-9--database-design)
+* [Phase 10 — API Design](#phase-10--api-design)
+* [Phase 11 — UI/UX Design](#phase-11--uiux-design)
+* [Phase 12 — Development](#phase-12--development)
+  * [Development Rules](#development-rules)
+* [Coding Standards](#coding-standards)
+* [Definition of Ready](#definition-of-ready)
+* [Definition of Done](#definition-of-done-1)
+* [Phase 13 — Testing](#phase-13--testing)
+  * [Coverage Goal](#coverage-goal)
+* [Phase 14 — Security Review](#phase-14--security-review)
+* [Phase 15 — Performance Optimization](#phase-15--performance-optimization)
+* [Phase 16 — Documentation](#phase-16--documentation)
+* [Phase 17 — Deployment](#phase-17--deployment)
+* [Supported Environments](#supported-environments)
+* [Phase 18 — Monitoring](#phase-18--monitoring)
+* [Alerting](#alerting)
+* [Phase 19 — Customer Feedback](#phase-19--customer-feedback)
+* [Phase 20 — Iteration](#phase-20--iteration)
+* [Release Types](#release-types)
+* [Release Checklist](#release-checklist)
+* [Quality Gates](#quality-gates-1)
+* [Project Success Metrics](#project-success-metrics)
+* [Continuous Improvement](#continuous-improvement-1)
+
+</details>
+
+<details>
+<summary><strong>PART 4 — ENGINEERING HANDBOOK</strong></summary>
+
+* [Engineering Philosophy](#engineering-philosophy)
+* [Engineering Principles](#engineering-principles)
+  * [SOLID](#solid)
+  * [DRY](#dry)
+  * [KISS](#kiss)
+  * [YAGNI](#yagni)
+  * [Composition Over Inheritance](#composition-over-inheritance)
+* [Repository Structure](#repository-structure)
+* [Branch Strategy](#branch-strategy)
+* [Git Commit Convention](#git-commit-convention)
+* [Pull Request Rules](#pull-request-rules)
+* [Code Review Checklist](#code-review-checklist)
+* [Naming Conventions](#naming-conventions)
+* [File Naming](#file-naming)
+* [Folder Rules](#folder-rules)
+* [Module Rules](#module-rules)
+* [Error Handling](#error-handling)
+* [Logging](#logging)
+* [Configuration](#configuration)
+* [Dependency Rules](#dependency-rules)
+* [Documentation Requirements](#documentation-requirements)
+* [Code Quality Standards](#code-quality-standards)
+* [Testing Standards](#testing-standards)
+* [Performance Standards](#performance-standards)
+* [Security Standards](#security-standards)
+* [API Standards](#api-standards)
+* [Database Standards](#database-standards)
+* [Architecture Review Checklist](#architecture-review-checklist)
+* [Technical Debt Policy](#technical-debt-policy)
+* [Refactoring Policy](#refactoring-policy)
+* [Engineering Definition of Excellence](#engineering-definition-of-excellence)
+
+</details>
+
+<details>
+<summary><strong>PART 5 — AI ENGINEERING HANDBOOK</strong></summary>
+
+* [AI Philosophy](#ai-philosophy)
+* [AI Design Principles](#ai-design-principles)
+* [AI System Architecture](#ai-system-architecture)
+* [AI Pipeline](#ai-pipeline)
+* [Multi-Agent Orchestration](#multi-agent-orchestration)
+  * [CEO Agent](#ceo-agent-1)
+  * [Planner Agent](#planner-agent)
+  * [Memory Agent](#memory-agent)
+  * [Research Agent](#research-agent)
+  * [Coding Agent](#coding-agent)
+  * [Reviewer Agent](#reviewer-agent)
+  * [Testing Agent](#testing-agent)
+  * [Documentation Agent](#documentation-agent)
+* [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+* [Memory Architecture](#memory-architecture)
+  * [Session Memory](#session-memory)
+  * [Project Memory](#project-memory)
+  * [Company Memory](#company-memory)
+  * [User Memory](#user-memory)
+  * [Knowledge Memory](#knowledge-memory)
+* [Planning Strategy](#planning-strategy)
+* [Tool Usage Policy](#tool-usage-policy)
+* [Prompt Engineering Standards](#prompt-engineering-standards)
+* [Context Management](#context-management)
+* [AI Reasoning Standards](#ai-reasoning-standards)
+* [Hallucination Prevention](#hallucination-prevention)
+* [Model Selection](#model-selection)
+* [Evaluation Framework](#evaluation-framework)
+* [AI Testing](#ai-testing)
+* [Autonomous Execution Rules](#autonomous-execution-rules)
+* [Human-in-the-Loop](#human-in-the-loop)
+* [Cost Optimization](#cost-optimization)
+* [Observability](#observability)
+* [AI Security](#ai-security)
+* [Continuous Learning](#continuous-learning)
+
+</details>
+
+<details>
+<summary><strong>PART 6 — STARTUP & BUSINESS HANDBOOK</strong></summary>
+
+* [Startup Philosophy](#startup-philosophy)
+* [Startup Lifecycle](#startup-lifecycle)
+* [Stage 1 — Problem Discovery](#stage-1--problem-discovery)
+  * [Objective](#objective)
+  * [Problem Discovery Sources](#problem-discovery-sources)
+  * [Problem Evaluation Score](#problem-evaluation-score)
+* [Stage 2 — Customer Discovery](#stage-2--customer-discovery)
+* [Customer Persona Template](#customer-persona-template)
+* [Jobs To Be Done (JTBD)](#jobs-to-be-done-jtbd)
+* [Stage 3 — Market Research](#stage-3--market-research)
+  * [TAM](#tam)
+  * [SAM](#sam)
+  * [SOM](#som)
+* [Stage 4 — Competitor Intelligence](#stage-4--competitor-intelligence)
+* [SWOT](#swot)
+* [Porter's Five Forces](#porters-five-forces)
+* [PESTLE](#pestle)
+* [Blue Ocean Strategy](#blue-ocean-strategy)
+* [Stage 5 — Business Model](#stage-5--business-model)
+* [Revenue Analysis](#revenue-analysis)
+* [Pricing Strategy](#pricing-strategy)
+* [Stage 6 — Product Definition](#stage-6--product-definition)
+* [MVP Strategy](#mvp-strategy)
+* [Feature Prioritization](#feature-prioritization)
+* [Product-Market Fit](#product-market-fit)
+* [Growth Strategy](#growth-strategy)
+* [Go-To-Market Strategy](#go-to-market-strategy)
+* [Sales Funnel](#sales-funnel)
+* [Customer Success](#customer-success)
+* [Unit Economics](#unit-economics)
+* [Financial Planning](#financial-planning)
+* [Fundraising](#fundraising)
+* [Investor Expectations](#investor-expectations)
+* [Startup Metrics](#startup-metrics)
+* [Scaling Strategy](#scaling-strategy)
+* [International Expansion](#international-expansion)
+* [Category Leadership](#category-leadership)
+* [Startup Operating Principles](#startup-operating-principles)
+
+</details>
+
+<details>
+<summary><strong>PART 7 — RESEARCH & INNOVATION HANDBOOK</strong></summary>
+
+* [Research Philosophy](#research-philosophy)
+* [Research Framework](#research-framework)
+* [Research Categories](#research-categories)
+  * [Customer Research](#customer-research)
+  * [Technical Research](#technical-research)
+  * [Market Research](#market-research)
+  * [Scientific Research](#scientific-research)
+  * [Patent Research](#patent-research)
+  * [Future Research](#future-research)
+* [Sources of Information](#sources-of-information)
+* [Research Workflow](#research-workflow)
+  * [Step 1](#step-1)
+  * [Step 2](#step-2)
+  * [Step 3](#step-3)
+  * [Step 4](#step-4)
+  * [Step 5](#step-5)
+  * [Step 6](#step-6)
+* [Research Quality Standards](#research-quality-standards)
+* [Innovation Framework](#innovation-framework)
+  * [Technology Innovation](#technology-innovation)
+  * [Business Innovation](#business-innovation)
+  * [Process Innovation](#process-innovation)
+  * [Experience Innovation](#experience-innovation)
+  * [System Innovation](#system-innovation)
+* [First Principles Framework](#first-principles-framework)
+* [Opportunity Discovery](#opportunity-discovery)
+* [Opportunity Scoring](#opportunity-scoring)
+* [Research Deliverables](#research-deliverables)
+* [Competitive Intelligence](#competitive-intelligence)
+* [Reverse Engineering](#reverse-engineering)
+* [Experimentation](#experimentation)
+* [Failure Policy](#failure-policy)
+* [Research Repository](#research-repository)
+* [Emerging Technology Watchlist](#emerging-technology-watchlist)
+* [Research Ethics](#research-ethics)
+* [Innovation Review Board](#innovation-review-board)
+* [Long-Term Innovation Strategy](#long-term-innovation-strategy)
+  * [Horizon 1](#horizon-1)
+  * [Horizon 2](#horizon-2)
+  * [Horizon 3](#horizon-3)
+* [Research Success Metrics](#research-success-metrics)
+* [Research Principles](#research-principles)
+
+</details>
+
+<details>
+<summary><strong>PART 8 — PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK</strong></summary>
+
+* [Product Philosophy](#product-philosophy)
+* [Product Lifecycle](#product-lifecycle)
+* [Product Organization](#product-organization)
+  * [Chief Product Officer](#chief-product-officer)
+  * [Product Manager](#product-manager-1)
+  * [Technical Product Manager](#technical-product-manager)
+  * [Product Operations](#product-operations)
+* [Product Vision](#product-vision)
+* [Product Strategy](#product-strategy)
+* [Product Principles](#product-principles)
+* [Product Discovery](#product-discovery)
+* [Customer Research](#customer-research-1)
+* [User Personas](#user-personas)
+* [Customer Journey](#customer-journey)
+* [Jobs To Be Done](#jobs-to-be-done)
+* [Product Requirements Document (PRD)](#product-requirements-document-prd)
+* [Functional Requirements](#functional-requirements-1)
+* [Non-functional Requirements](#non-functional-requirements-1)
+* [User Stories](#user-stories-1)
+* [Acceptance Criteria](#acceptance-criteria)
+* [Feature Prioritization](#feature-prioritization-1)
+  * [RICE](#rice)
+  * [MoSCoW](#moscow)
+  * [Kano](#kano)
+* [Product Roadmap](#product-roadmap)
+* [Product Backlog](#product-backlog)
+* [Release Planning](#release-planning)
+* [Design Organization](#design-organization)
+  * [UX Research](#ux-research)
+  * [UX Design](#ux-design)
+  * [UI Design](#ui-design)
+* [Design Principles](#design-principles)
+* [Design System](#design-system)
+* [Accessibility](#accessibility)
+* [Interaction Design](#interaction-design)
+* [Usability Testing](#usability-testing)
+* [Product Analytics](#product-analytics)
+* [A/B Testing](#ab-testing)
+* [Product Metrics](#product-metrics)
+* [Product Reviews](#product-reviews)
+* [Launch Checklist](#launch-checklist)
+* [Post-Launch](#post-launch)
+* [Product Iteration](#product-iteration)
+* [Product Retirement](#product-retirement)
+* [Product Success Principles](#product-success-principles)
+
+</details>
+
+---
+
+# PART 1 — COMPANY OPERATING MANUAL
+
+---
+
 # Mission
 
 Build products that solve meaningful real-world problems.
@@ -506,7 +914,9 @@ A task is complete only when:
 
 Completion means the feature is ready for production, not merely implemented.
 
-# AI ORGANIZATION
+[⬆ Back to Top](#table-of-contents)
+
+# PART 2 — AI ORGANIZATION
 
 ## Philosophy
 
@@ -1555,7 +1965,9 @@ Every agent must:
 
 No agent operates independently on major decisions. Strategic work requires cross-functional review before approval by the CEO Agent.
 
-# SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)
+[⬆ Back to Top](#table-of-contents)
+
+# PART 3 — SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)
 
 > Every project follows the same disciplined engineering process. No phase may be skipped without explicit approval from the CEO Agent.
 
@@ -2313,6 +2725,8 @@ Document:
 * Action items for future projects
 
 The objective is to make every future project faster, safer, and higher quality than the last.
+
+[⬆ Back to Top](#table-of-contents)
 
 # PART 4 — ENGINEERING HANDBOOK
 
@@ -3074,6 +3488,8 @@ Excellent engineering is code that:
 
 Engineering success is measured not by lines of code written, but by reliable systems delivered.
 
+[⬆ Back to Top](#table-of-contents)
+
 # PART 5 — AI ENGINEERING HANDBOOK
 
 > This section defines how every AI system in the company is designed, evaluated, deployed, and improved. AI is treated as an engineering discipline rather than prompt writing.
@@ -3676,6 +4092,8 @@ After every completed task:
 * refine evaluation datasets
 
 The AI organization should become more capable over time through disciplined iteration, not by relying on undocumented experience.
+
+[⬆ Back to Top](#table-of-contents)
 
 # PART 6 — STARTUP & BUSINESS HANDBOOK
 
@@ -4518,6 +4936,8 @@ Every strategic decision should answer:
 
 The goal is not simply to build a product—it is to build an enduring company capable of solving important problems for millions of people.
 
+[⬆ Back to Top](#table-of-contents)
+
 # PART 7 — RESEARCH & INNOVATION HANDBOOK
 
 > The purpose of research is not to collect information. The purpose is to discover opportunities that others have overlooked and transform them into defensible products.
@@ -5259,6 +5679,8 @@ Research should continuously reduce uncertainty.
 Innovation should continuously increase value.
 
 The company should strive to become a learning organization where every experiment, success, and failure contributes to a growing body of knowledge that compounds over time and strengthens every future decision.
+
+[⬆ Back to Top](#table-of-contents)
 
 # PART 8 — PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK
 
