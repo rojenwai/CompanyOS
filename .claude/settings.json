@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:/Users/rojen/AppData/Local/Temp/claude/d--CODING-FILES-AI-Company-Repo/64f36678-4758-4230-9933-6aa211c039ed/scratchpad/build_toc.py\")",
+      "Bash(grep -c \"^#\\\\{1,2\\\\} \" \"d:/CODING/FILES/AI-Company-Repo/README.md\")"
+    ]
+  }
+}
