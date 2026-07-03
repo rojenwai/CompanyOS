@@ -9,7 +9,7 @@
 # Table of Contents
 
 <details>
-<summary><strong>PART 1 — COMPANY OPERATING MANUAL</strong></summary>
+<summary><strong>PART 1 - COMPANY OPERATING MANUAL</strong></summary>
 
 * [Mission](#mission)
 * [Vision](#vision)
@@ -60,7 +60,7 @@
 </details>
 
 <details>
-<summary><strong>PART 2 — AI ORGANIZATION</strong></summary>
+<summary><strong>PART 2 - AI ORGANIZATION</strong></summary>
 
 * [Philosophy](#philosophy)
 * [Agent Hierarchy](#agent-hierarchy)
@@ -132,53 +132,53 @@
 </details>
 
 <details>
-<summary><strong>PART 3 — SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)</strong></summary>
+<summary><strong>PART 3 - SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)</strong></summary>
 
 * [Overview](#overview)
-* [Phase 1 — Problem Discovery](#phase-1--problem-discovery)
+* [Phase 1 - Problem Discovery](#phase-1--problem-discovery)
   * [Goal](#goal)
   * [Questions](#questions)
   * [Deliverables](#deliverables)
   * [Exit Criteria](#exit-criteria)
-* [Phase 2 — Research](#phase-2--research)
+* [Phase 2 - Research](#phase-2--research)
   * [Activities](#activities)
   * [Deliverables](#deliverables-1)
   * [Exit Criteria](#exit-criteria-1)
-* [Phase 3 — Market Validation](#phase-3--market-validation)
+* [Phase 3 - Market Validation](#phase-3--market-validation)
   * [Objectives](#objectives)
   * [Activities](#activities-1)
   * [Deliverables](#deliverables-2)
   * [Exit Criteria](#exit-criteria-2)
-* [Phase 4 — Business Analysis](#phase-4--business-analysis)
+* [Phase 4 - Business Analysis](#phase-4--business-analysis)
   * [Deliverables](#deliverables-3)
-* [Phase 5 — Product Definition](#phase-5--product-definition)
+* [Phase 5 - Product Definition](#phase-5--product-definition)
   * [Product Manager Creates](#product-manager-creates)
-* [Phase 6 — Requirements](#phase-6--requirements)
+* [Phase 6 - Requirements](#phase-6--requirements)
   * [Functional Requirements](#functional-requirements)
   * [Non-Functional Requirements](#non-functional-requirements)
   * [User Stories](#user-stories)
-* [Phase 7 — Architecture](#phase-7--architecture)
+* [Phase 7 - Architecture](#phase-7--architecture)
   * [Deliverables](#deliverables-4)
-* [Phase 8 — System Design](#phase-8--system-design)
-* [Phase 9 — Database Design](#phase-9--database-design)
-* [Phase 10 — API Design](#phase-10--api-design)
-* [Phase 11 — UI/UX Design](#phase-11--uiux-design)
-* [Phase 12 — Development](#phase-12--development)
+* [Phase 8 - System Design](#phase-8--system-design)
+* [Phase 9 - Database Design](#phase-9--database-design)
+* [Phase 10 - API Design](#phase-10--api-design)
+* [Phase 11 - UI/UX Design](#phase-11--uiux-design)
+* [Phase 12 - Development](#phase-12--development)
   * [Development Rules](#development-rules)
 * [Coding Standards](#coding-standards)
 * [Definition of Ready](#definition-of-ready)
 * [Definition of Done](#definition-of-done-1)
-* [Phase 13 — Testing](#phase-13--testing)
+* [Phase 13 - Testing](#phase-13--testing)
   * [Coverage Goal](#coverage-goal)
-* [Phase 14 — Security Review](#phase-14--security-review)
-* [Phase 15 — Performance Optimization](#phase-15--performance-optimization)
-* [Phase 16 — Documentation](#phase-16--documentation)
-* [Phase 17 — Deployment](#phase-17--deployment)
+* [Phase 14 - Security Review](#phase-14--security-review)
+* [Phase 15 - Performance Optimization](#phase-15--performance-optimization)
+* [Phase 16 - Documentation](#phase-16--documentation)
+* [Phase 17 - Deployment](#phase-17--deployment)
 * [Supported Environments](#supported-environments)
-* [Phase 18 — Monitoring](#phase-18--monitoring)
+* [Phase 18 - Monitoring](#phase-18--monitoring)
 * [Alerting](#alerting)
-* [Phase 19 — Customer Feedback](#phase-19--customer-feedback)
-* [Phase 20 — Iteration](#phase-20--iteration)
+* [Phase 19 - Customer Feedback](#phase-19--customer-feedback)
+* [Phase 20 - Iteration](#phase-20--iteration)
 * [Release Types](#release-types)
 * [Release Checklist](#release-checklist)
 * [Quality Gates](#quality-gates-1)
@@ -188,7 +188,7 @@
 </details>
 
 <details>
-<summary><strong>PART 4 — ENGINEERING HANDBOOK</strong></summary>
+<summary><strong>PART 4 - ENGINEERING HANDBOOK</strong></summary>
 
 * [Engineering Philosophy](#engineering-philosophy)
 * [Engineering Principles](#engineering-principles)
@@ -225,7 +225,7 @@
 </details>
 
 <details>
-<summary><strong>PART 5 — AI ENGINEERING HANDBOOK</strong></summary>
+<summary><strong>PART 5 - AI ENGINEERING HANDBOOK</strong></summary>
 
 * [AI Philosophy](#ai-philosophy)
 * [AI Design Principles](#ai-design-principles)
@@ -266,30 +266,30 @@
 </details>
 
 <details>
-<summary><strong>PART 6 — STARTUP & BUSINESS HANDBOOK</strong></summary>
+<summary><strong>PART 6 - STARTUP & BUSINESS HANDBOOK</strong></summary>
 
 * [Startup Philosophy](#startup-philosophy)
 * [Startup Lifecycle](#startup-lifecycle)
-* [Stage 1 — Problem Discovery](#stage-1--problem-discovery)
+* [Stage 1 - Problem Discovery](#stage-1--problem-discovery)
   * [Objective](#objective)
   * [Problem Discovery Sources](#problem-discovery-sources)
   * [Problem Evaluation Score](#problem-evaluation-score)
-* [Stage 2 — Customer Discovery](#stage-2--customer-discovery)
+* [Stage 2 - Customer Discovery](#stage-2--customer-discovery)
 * [Customer Persona Template](#customer-persona-template)
 * [Jobs To Be Done (JTBD)](#jobs-to-be-done-jtbd)
-* [Stage 3 — Market Research](#stage-3--market-research)
+* [Stage 3 - Market Research](#stage-3--market-research)
   * [TAM](#tam)
   * [SAM](#sam)
   * [SOM](#som)
-* [Stage 4 — Competitor Intelligence](#stage-4--competitor-intelligence)
+* [Stage 4 - Competitor Intelligence](#stage-4--competitor-intelligence)
 * [SWOT](#swot)
 * [Porter's Five Forces](#porters-five-forces)
 * [PESTLE](#pestle)
 * [Blue Ocean Strategy](#blue-ocean-strategy)
-* [Stage 5 — Business Model](#stage-5--business-model)
+* [Stage 5 - Business Model](#stage-5--business-model)
 * [Revenue Analysis](#revenue-analysis)
 * [Pricing Strategy](#pricing-strategy)
-* [Stage 6 — Product Definition](#stage-6--product-definition)
+* [Stage 6 - Product Definition](#stage-6--product-definition)
 * [MVP Strategy](#mvp-strategy)
 * [Feature Prioritization](#feature-prioritization)
 * [Product-Market Fit](#product-market-fit)
@@ -310,7 +310,7 @@
 </details>
 
 <details>
-<summary><strong>PART 7 — RESEARCH & INNOVATION HANDBOOK</strong></summary>
+<summary><strong>PART 7 - RESEARCH & INNOVATION HANDBOOK</strong></summary>
 
 * [Research Philosophy](#research-philosophy)
 * [Research Framework](#research-framework)
@@ -358,7 +358,7 @@
 </details>
 
 <details>
-<summary><strong>PART 8 — PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK</strong></summary>
+<summary><strong>PART 8 - PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK</strong></summary>
 
 * [Product Philosophy](#product-philosophy)
 * [Product Lifecycle](#product-lifecycle)
@@ -410,7 +410,7 @@
 
 ---
 
-# PART 1 — COMPANY OPERATING MANUAL
+# PART 1 - COMPANY OPERATING MANUAL
 
 ---
 
@@ -916,7 +916,7 @@ Completion means the feature is ready for production, not merely implemented.
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 2 — AI ORGANIZATION
+# PART 2 - AI ORGANIZATION
 
 ## Philosophy
 
@@ -1967,7 +1967,7 @@ No agent operates independently on major decisions. Strategic work requires cros
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 3 — SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)
+# PART 3 - SOFTWARE DEVELOPMENT LIFECYCLE (SDLC)
 
 > Every project follows the same disciplined engineering process. No phase may be skipped without explicit approval from the CEO Agent.
 
@@ -2019,7 +2019,7 @@ Scaling
 
 ---
 
-# Phase 1 — Problem Discovery
+# Phase 1 - Problem Discovery
 
 ## Goal
 
@@ -2048,7 +2048,7 @@ Build something people genuinely need.
 
 ---
 
-# Phase 2 — Research
+# Phase 2 - Research
 
 ## Activities
 
@@ -2072,7 +2072,7 @@ Build something people genuinely need.
 
 ---
 
-# Phase 3 — Market Validation
+# Phase 3 - Market Validation
 
 ## Objectives
 
@@ -2101,7 +2101,7 @@ Validate demand before building.
 
 ---
 
-# Phase 4 — Business Analysis
+# Phase 4 - Business Analysis
 
 ## Deliverables
 
@@ -2125,7 +2125,7 @@ Risk Assessment
 
 ---
 
-# Phase 5 — Product Definition
+# Phase 5 - Product Definition
 
 ## Product Manager Creates
 
@@ -2145,7 +2145,7 @@ Release Plan
 
 ---
 
-# Phase 6 — Requirements
+# Phase 6 - Requirements
 
 ## Functional Requirements
 
@@ -2201,7 +2201,7 @@ Edge Cases
 
 ---
 
-# Phase 7 — Architecture
+# Phase 7 - Architecture
 
 ## Deliverables
 
@@ -2225,7 +2225,7 @@ Disaster Recovery
 
 ---
 
-# Phase 8 — System Design
+# Phase 8 - System Design
 
 Design
 
@@ -2249,7 +2249,7 @@ Networking
 
 ---
 
-# Phase 9 — Database Design
+# Phase 9 - Database Design
 
 Deliverables
 
@@ -2269,7 +2269,7 @@ Data Retention Policy
 
 ---
 
-# Phase 10 — API Design
+# Phase 10 - API Design
 
 Every endpoint defines
 
@@ -2295,7 +2295,7 @@ Documentation
 
 ---
 
-# Phase 11 — UI/UX Design
+# Phase 11 - UI/UX Design
 
 Deliverables
 
@@ -2321,7 +2321,7 @@ Dark Mode
 
 ---
 
-# Phase 12 — Development
+# Phase 12 - Development
 
 ## Development Rules
 
@@ -2393,7 +2393,7 @@ Deployed
 
 ---
 
-# Phase 13 — Testing
+# Phase 13 - Testing
 
 Testing Pyramid
 
@@ -2429,7 +2429,7 @@ Critical systems
 
 ---
 
-# Phase 14 — Security Review
+# Phase 14 - Security Review
 
 Checklist
 
@@ -2459,7 +2459,7 @@ Compliance
 
 ---
 
-# Phase 15 — Performance Optimization
+# Phase 15 - Performance Optimization
 
 Measure
 
@@ -2483,7 +2483,7 @@ Thermals
 
 ---
 
-# Phase 16 — Documentation
+# Phase 16 - Documentation
 
 Required
 
@@ -2505,7 +2505,7 @@ Release Notes
 
 ---
 
-# Phase 17 — Deployment
+# Phase 17 - Deployment
 
 Pipeline
 
@@ -2541,7 +2541,7 @@ Production
 
 ---
 
-# Phase 18 — Monitoring
+# Phase 18 - Monitoring
 
 Metrics
 
@@ -2579,7 +2579,7 @@ Informational
 
 ---
 
-# Phase 19 — Customer Feedback
+# Phase 19 - Customer Feedback
 
 Collect
 
@@ -2601,7 +2601,7 @@ Usage Metrics
 
 ---
 
-# Phase 20 — Iteration
+# Phase 20 - Iteration
 
 Every release includes
 
@@ -2728,7 +2728,7 @@ The objective is to make every future project faster, safer, and higher quality 
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 4 — ENGINEERING HANDBOOK
+# PART 4 - ENGINEERING HANDBOOK
 
 > This handbook defines the engineering standards for every software, AI, embedded, robotics, and hardware project.
 
@@ -3490,7 +3490,7 @@ Engineering success is measured not by lines of code written, but by reliable sy
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 5 — AI ENGINEERING HANDBOOK
+# PART 5 - AI ENGINEERING HANDBOOK
 
 > This section defines how every AI system in the company is designed, evaluated, deployed, and improved. AI is treated as an engineering discipline rather than prompt writing.
 
@@ -4095,7 +4095,7 @@ The AI organization should become more capable over time through disciplined ite
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 6 — STARTUP & BUSINESS HANDBOOK
+# PART 6 - STARTUP & BUSINESS HANDBOOK
 
 > Engineering builds products. Business builds companies.
 >
@@ -4156,7 +4156,7 @@ Category Leadership
 
 ---
 
-# Stage 1 — Problem Discovery
+# Stage 1 - Problem Discovery
 
 ## Objective
 
@@ -4230,7 +4230,7 @@ Problems with low scores are archived.
 
 ---
 
-# Stage 2 — Customer Discovery
+# Stage 2 - Customer Discovery
 
 Identify:
 
@@ -4298,7 +4298,7 @@ Current Alternatives
 
 ---
 
-# Stage 3 — Market Research
+# Stage 3 - Market Research
 
 Research includes:
 
@@ -4350,7 +4350,7 @@ Margins
 
 ---
 
-# Stage 4 — Competitor Intelligence
+# Stage 4 - Competitor Intelligence
 
 Study:
 
@@ -4454,7 +4454,7 @@ Avoid competing solely on price.
 
 ---
 
-# Stage 5 — Business Model
+# Stage 5 - Business Model
 
 Possible models:
 
@@ -4540,7 +4540,7 @@ Custom Pricing
 
 ---
 
-# Stage 6 — Product Definition
+# Stage 6 - Product Definition
 
 Every product requires:
 
@@ -4934,11 +4934,11 @@ Every strategic decision should answer:
 * Can it become a global business?
 * Does it align with our mission?
 
-The goal is not simply to build a product—it is to build an enduring company capable of solving important problems for millions of people.
+The goal is not simply to build a product-it is to build an enduring company capable of solving important problems for millions of people.
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 7 — RESEARCH & INNOVATION HANDBOOK
+# PART 7 - RESEARCH & INNOVATION HANDBOOK
 
 > The purpose of research is not to collect information. The purpose is to discover opportunities that others have overlooked and transform them into defensible products.
 
@@ -5682,7 +5682,7 @@ The company should strive to become a learning organization where every experime
 
 [⬆ Back to Top](#table-of-contents)
 
-# PART 8 — PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK
+# PART 8 - PRODUCT MANAGEMENT & PRODUCT DESIGN HANDBOOK
 
 > Great engineering builds products correctly. Great product management ensures the right products are built.
 
