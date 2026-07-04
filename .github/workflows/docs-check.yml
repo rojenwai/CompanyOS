@@ -22,3 +22,6 @@ jobs:
 
       - name: Verify internal Markdown links
         run: python scripts/check-links.py
+
+      - name: Verify structural conventions
+        run: python scripts/check-structure.py

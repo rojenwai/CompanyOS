@@ -61,17 +61,56 @@ Legend: ✅ spec written · 🧭 planned (write from the [template](agent-templa
 [API Compatibility Agent](post-launch/api-compatibility-agent.md) ✅ · [Technical Debt Agent](post-launch/technical-debt-agent.md) ✅ ·
 [Documentation Maintenance Agent](post-launch/documentation-maintenance-agent.md) ✅
 
-### Research Division 🧭
-Problem Discovery · Market Research · Competitor Analysis · Patent Research · Academic Research · Technology Scout · Trend Prediction · Opportunity Ranking — see [research/](../research/).
+### Research Division → [research/](research/) ✅
+[Problem Discovery](research/problem-discovery-agent.md) · [Market Research](research/market-research-agent.md) · [Competitor Analysis](research/competitor-analysis-agent.md) · [Opportunity Ranking](research/opportunity-ranking-agent.md)
 
-### AI Division 🧭
-AI Architect · Machine Learning Engineer · Computer Vision Engineer · NLP Engineer · LLM Engineer · Reinforcement Learning Engineer · AI Evaluation Agent — see [ai/](../ai/).
+### AI Division → [ai/](ai/) ✅
+[AI Architect](ai/ai-architect-agent.md) · [LLM Engineer](ai/llm-engineer-agent.md) · [ML Engineer](ai/ml-engineer-agent.md) · [AI Evaluation](ai/ai-evaluation-agent.md)
 
-### Design Division 🧭
-UX Research · UI Designer · Interaction Designer · Design System Agent — see [design/](../design/).
+### Design Division → [design/](design/) ✅
+[UX Research](design/ux-research-agent.md) · [UI Designer](design/ui-designer-agent.md) · [Interaction Designer](design/interaction-designer-agent.md) · [Design System](design/design-system-agent.md) · [Accessibility](design/accessibility-agent.md)
 
-### Business · Hardware · Security · DevOps · Data · Documentation · Marketing · Sales · Finance · Legal · Investor Relations 🧭
-Planned. Each division's agents are written from the [template](agent-template.md) as its department is built.
+### Strategy / Business Division → [strategy/](strategy/) ✅
+[Business Strategy](strategy/business-strategy-agent.md) · [Business Model & Pricing](strategy/business-model-pricing-agent.md) · [Go-To-Market](strategy/go-to-market-agent.md) · [Fundraising](strategy/fundraising-agent.md)
+
+### Security Division → [security/](security/) ✅
+[Security Architect](security/security-architect-agent.md) · [Penetration Testing](security/penetration-testing-agent.md) · [Vulnerability Management](security/vulnerability-management-agent.md) · [Compliance & Privacy](security/compliance-privacy-agent.md)
+
+### DevOps Division → [devops/](devops/) ✅
+[CI/CD Engineer](devops/cicd-engineer-agent.md) · [Platform Engineer](devops/platform-engineer-agent.md) · [Site Reliability](devops/site-reliability-agent.md) · [Release Engineer](devops/release-engineer-agent.md)
+
+### Finance Division → [finance/](finance/) ✅
+[Financial Planning](finance/financial-planning-agent.md) · [Accounting](finance/accounting-agent.md) · [Revenue & Billing](finance/revenue-billing-agent.md) · [Cost Optimization](finance/cost-optimization-agent.md)
+
+### Legal Division → [legal/](legal/) ✅
+[Contract](legal/contract-agent.md) · [IP & Patent](legal/ip-patent-agent.md) · [Compliance](legal/compliance-agent.md) · [Privacy & Terms](legal/privacy-terms-agent.md)
+
+### People & HR Division → [hr/](hr/) ✅
+[Recruiting](hr/recruiting-agent.md) · [Onboarding](hr/onboarding-agent.md) · [Performance & Growth](hr/performance-growth-agent.md) · [Culture](hr/culture-agent.md)
+
+### Operations Division → [operations/](operations/) ✅
+[Project Management](operations/project-management-agent.md) · [Process Optimization](operations/process-optimization-agent.md) · [Vendor Management](operations/vendor-management-agent.md) · [Knowledge Management](operations/knowledge-management-agent.md)
+
+### Marketing Division → [marketing/](marketing/) ✅
+[Content Marketing](marketing/content-marketing-agent.md) · [SEO](marketing/seo-agent.md) · [Brand & Communications](marketing/brand-communications-agent.md) · [Growth Marketing](marketing/growth-marketing-agent.md)
+
+### Sales Division → [sales/](sales/) ✅
+[Prospecting](sales/prospecting-agent.md) · [Account Executive](sales/account-executive-agent.md) · [Sales Engineer](sales/sales-engineer-agent.md) · [Deal Desk](sales/deal-desk-agent.md)
+
+### Customer Success Division → [customer-success/](customer-success/) ✅
+[Customer Onboarding](customer-success/customer-onboarding-agent.md) · [Support](customer-success/support-agent.md) · [Customer Health](customer-success/customer-health-agent.md) · [Renewal & Expansion](customer-success/renewal-expansion-agent.md)
+
+### Data Division → [data/](data/) ✅
+[Data Engineer](data/data-engineer-agent.md) · [Analytics Engineer](data/analytics-engineer-agent.md) · [Data Scientist](data/data-scientist-agent.md) · [Data Governance](data/data-governance-agent.md)
+
+### Documentation Division → [documentation/](documentation/) ✅
+[Technical Writer](documentation/technical-writer-agent.md) · [API Documentation](documentation/api-documentation-agent.md) · [Knowledge Base](documentation/knowledge-base-agent.md)
+
+### Hardware Division → [hardware/](hardware/) ✅
+[Firmware Engineer](hardware/firmware-engineer-agent.md) · [Electrical Engineer](hardware/electrical-engineer-agent.md) · [Mechanical Engineer](hardware/mechanical-engineer-agent.md) · [Hardware Test](hardware/hardware-test-agent.md)
+
+### Investor Relations Division → [investor-relations/](investor-relations/) ✅
+[Investor Reporting](investor-relations/investor-reporting-agent.md) · [Board Governance](investor-relations/board-governance-agent.md) · [Cap Table](investor-relations/cap-table-agent.md)
 
 ---
 

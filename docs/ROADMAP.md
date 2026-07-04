@@ -1,49 +1,35 @@
 # Roadmap
 
-What Company OS contains today and what would make it the complete "company in a box." Built
-incrementally, depth-first — every planned item replicates a pattern that already exists, so it is
-replication, not invention.
+Company OS is now feature-complete as a framework: all 20 departments, 93 agents, 11 starter kits, the
+guides, and CI are built. This page tracks what exists and the (now optional) directions for growth.
 
 ## ✅ Built
 
 - **Foundation & conventions** — [hub README](../README.md), [STRUCTURE](../STRUCTURE.md), [CONTRIBUTING](../CONTRIBUTING.md), [GLOSSARY](../GLOSSARY.md), [department template](../templates/department-template/), [agent template](../agents/agent-template.md), [document templates](../templates/documents/).
 - **Kernel** — [orchestration/](../orchestration/), [memory/](../memory/), [agents registry](../agents/README.md).
 - **Identity & governance** — [company/](../company/), [governance/](../governance/).
-- **Full departments** — [engineering/](../engineering/), [product/](../product/), [post-launch/](../post-launch/) (with maintenance agents, [technical-debt/](../post-launch/technical-debt/), and [playbooks/](../post-launch/playbooks/)).
-- **Seeded departments** — [design/](../design/), [research/](../research/), [ai/](../ai/), [strategy/](../strategy/).
+- **All 20 departments, full structure** — engineering, product, post-launch, design, research, ai, strategy, security, devops, finance, legal, hr, operations, marketing, sales, customer-success, data, documentation, hardware, investor-relations. Each has the standard 18 files + `templates/`, `checklists/`, `examples/`.
+- **93 agent specifications** across every division, each following the 11-section [standard spec](../agents/agent-template.md).
+- **11 starter kits** — [ai-startup](../starter-kits/ai-startup/) plus [saas](../starter-kits/saas/), [developer-tools](../starter-kits/developer-tools/), [enterprise-b2b](../starter-kits/enterprise-b2b/), [marketplace](../starter-kits/marketplace/), [consumer-app](../starter-kits/consumer-app/), [robotics](../starter-kits/robotics/), [drone](../starter-kits/drone/), [embedded](../starter-kits/embedded/), [iot](../starter-kits/iot/), [research-lab](../starter-kits/research-lab/).
 - **Shared systems** — [workflows/sdlc.md](../workflows/sdlc.md), [standards/](../standards/), [playbooks/](../playbooks/).
-- **Guide & starter kit** — [company-building-guide.md](company-building-guide.md), [starter-kits/ai-startup/](../starter-kits/ai-startup/).
-- **Community health & CI** — [.github/](../.github/) (issue/PR templates, code of conduct, security, support, funding, docs-check workflow).
+- **Guides** — [company-building-guide](company-building-guide.md), [onboarding-paths](onboarding-paths.md), [okrs](okrs.md), [example-company](example-company.md).
+- **Community health & CI** — [.github/](../.github/) and docs-check workflows ([link integrity](../scripts/check-links.py) + [structure conformance](../scripts/check-structure.py)).
 
-## 🧭 Planned — replicate the department template
+## 🧭 Optional next directions
 
-Full-structure build-out of the remaining departments, each from [templates/department-template/](../templates/department-template/):
+The framework is complete; these deepen it rather than fill gaps.
 
-**marketing · sales · finance · legal · operations · hr · security · devops · customer-success · investor-relations · data**
-
-…and upgrading the seeded departments (design, research, ai, strategy) to the full 18-file structure.
-
-## 🧭 Planned — more starter kits
-
-Following [starter-kits/ai-startup/](../starter-kits/ai-startup/): **saas · developer-tools ·
-enterprise-b2b · marketplace · consumer-app · robotics · drone · embedded · hardware · iot · research-lab.**
-
-## Recommended additions (to become the full "company pack")
-
-| Add | Why it's worth it |
+| Direction | Value |
 |---|---|
-| **`hr/` + `operations/` departments** | Hiring, onboarding, culture, and PM are where founders lose the most time — high leverage. |
-| **`finance/` department** (from strategy seed) | Runway/cash is the #1 company killer; deserves its own operating manual. |
-| **`legal/` department** | Incorporation, IP, contracts, privacy — expensive to get wrong; templatize it. |
-| **More document templates** | Offer letter, employment agreement, board update, OKR sheet, one-pager, sales proposal, MSA/DPA. |
-| **More cross-department playbooks** | Hiring an engineer, running a sprint, handling a customer complaint, fundraising, scaling a team, international expansion. |
-| **Onboarding path per role** | A "day 1 → day 30" checklist per department so new hires (or agents) ramp fast. |
-| **OKR / goal-setting system** | A lightweight `metrics/` or `okrs/` area tying department metrics to company goals. |
-| **Example company walkthrough** | One fictional company taken through every step end-to-end (a living [example](../engineering/examples/)). |
-| **Automation via `.github/workflows/`** | Extend beyond docs-check: markdown lint, spell check, TOC generation, stale-issue bot. |
-| **`CHANGELOG.md` + release process for the repo itself** | Version Company OS so adopters can track updates. |
+| More cross-department playbooks | Handling a customer complaint, scaling a team, international expansion. |
+| More document templates | Employment agreement, MSA/DPA, sales proposal, QBR deck. |
+| More starter kits | Fintech, healthtech, climate-tech, gaming, edtech — copy the [ai-startup](../starter-kits/ai-startup/) pattern. |
+| Deeper worked examples | Add per-department worked examples beyond the current one each. |
+| More CI | Markdown lint, spell-check, TOC generation, stale-issue bot. |
+| Tooling | A CLI to scaffold a new department/agent from the templates. |
 
-## Contributing to the roadmap
+## Contributing
 
-Pick any 🧭 item, copy the relevant template, and follow [CONTRIBUTING.md](../CONTRIBUTING.md). Open an
-issue with the [feature request template](../.github/ISSUE_TEMPLATE/feature_request.md) to propose new areas.
+Pick any direction, copy the relevant template, and follow [CONTRIBUTING.md](../CONTRIBUTING.md). Run
+`python scripts/check-links.py` and `python scripts/check-structure.py` before opening a PR. Propose new
+areas via the [feature request template](../.github/ISSUE_TEMPLATE/feature_request.md).

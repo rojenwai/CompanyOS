@@ -9,6 +9,9 @@ with the department that runs them, in [post-launch/playbooks/](../post-launch/p
 |---|---|
 | [launching-a-product.md](launching-a-product.md) | Taking a product from ready to launched |
 | [building-an-mvp.md](building-an-mvp.md) | Scoping and shipping a first version |
+| [hiring-an-engineer.md](hiring-an-engineer.md) | Adding engineering capacity, rigorously |
+| [running-a-sprint.md](running-a-sprint.md) | The recurring build cadence |
+| [fundraising.md](fundraising.md) | Raising capital (or deciding not to) |
 
 ## Operational playbooks (in their departments)
 
@@ -22,5 +25,5 @@ with the department that runs them, in [post-launch/playbooks/](../post-launch/p
 
 ## Planned
 
-Hiring an engineer · running a sprint · customer complaint · fundraising · scaling a team ·
-international expansion — add these here following the same format.
+Handling a customer complaint · scaling a team · international expansion — add these here following the
+same format. Department-specific situations already have playbooks in each department's `playbooks.md`.

@@ -44,16 +44,15 @@ New here? See [STRUCTURE.md](STRUCTURE.md) for the map and [GLOSSARY.md](GLOSSAR
 | [agents/](agents/) | The AI agent registry + the standard agent specification |
 
 ### Departments (each a miniature operating manual)
-| Department | Status |
-|---|---|
-| [engineering/](engineering/) | ✅ Fully built |
-| [product/](product/) | ✅ Fully built |
-| [post-launch/](post-launch/) | ✅ Fully built (maintenance, monitoring, incident response, EOL) |
-| [design/](design/) | 🌱 Seeded |
-| [research/](research/) | 🌱 Seeded |
-| [ai/](ai/) | 🌱 Seeded |
-| [strategy/](strategy/) | 🌱 Seeded |
-| marketing · sales · finance · legal · operations · hr · security · devops · customer-success · investor-relations | 🧭 Planned — replicate the [department template](templates/department-template/) |
+All 20 departments are fully built: the standard 18 files + `templates/`, `checklists/`, `examples/`, and their AI agents.
+
+| | | | |
+|---|---|---|---|
+| [engineering/](engineering/) | [product/](product/) | [post-launch/](post-launch/) | [design/](design/) |
+| [research/](research/) | [ai/](ai/) | [strategy/](strategy/) | [security/](security/) |
+| [devops/](devops/) | [finance/](finance/) | [legal/](legal/) | [hr/](hr/) |
+| [operations/](operations/) | [marketing/](marketing/) | [sales/](sales/) | [customer-success/](customer-success/) |
+| [data/](data/) | [documentation/](documentation/) | [hardware/](hardware/) | [investor-relations/](investor-relations/) |
 
 ### Shared systems
 | Area | Purpose |
@@ -62,10 +61,8 @@ New here? See [STRUCTURE.md](STRUCTURE.md) for the map and [GLOSSARY.md](GLOSSAR
 | [standards/](standards/) | Company-wide standards (naming, docs, reviews, APIs, security…) |
 | [templates/](templates/) | Reusable [department](templates/department-template/) and [document](templates/documents/) templates |
 | [playbooks/](playbooks/) | Operational playbooks (launch, incident, hiring, fundraising…) |
-| [starter-kits/](starter-kits/) | Preconfigured company types ([ai-startup](starter-kits/ai-startup/), saas, robotics, …) |
-| [docs/](docs/) | Cross-cutting guides: the [Company-Building Guide](docs/company-building-guide.md) and the [ROADMAP](docs/ROADMAP.md) |
-
-**Legend:** ✅ fully built · 🌱 seeded with real content, full structure pending · 🧭 planned, follows the template.
+| [starter-kits/](starter-kits/) | 11 preconfigured company types ([ai-startup](starter-kits/ai-startup/), [saas](starter-kits/saas/), [enterprise-b2b](starter-kits/enterprise-b2b/), [marketplace](starter-kits/marketplace/), [robotics](starter-kits/robotics/), …) |
+| [docs/](docs/) | Cross-cutting guides: the [Company-Building Guide](docs/company-building-guide.md), [onboarding paths](docs/onboarding-paths.md), [OKRs](docs/okrs.md), a [worked example](docs/example-company.md), and the [ROADMAP](docs/ROADMAP.md) |
 
 ---
 

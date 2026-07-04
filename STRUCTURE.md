@@ -18,15 +18,10 @@ company-os (repository root)
 ├── memory/               Memory architecture: types, retrieval, retention, versioning
 ├── agents/               AI agent registry + the standard agent specification
 │
-├── engineering/          Department (full)
-├── product/              Department (full)
-├── post-launch/          Department (full) — maintenance, monitoring, incident response, EOL
-├── design/               Department (seeded)
-├── research/             Department (seeded)
-├── ai/                   Department (seeded)
-├── strategy/             Department (seeded)
-│   … marketing, sales, finance, legal, operations, hr, security, devops,
-│     customer-success, investor-relations (planned — replicate the template)
+│                         20 departments, all full (18 files + templates/ checklists/ examples/):
+├── engineering/  product/  post-launch/  design/  research/  ai/  strategy/
+├── security/  devops/  finance/  legal/  hr/  operations/  marketing/
+├── sales/  customer-success/  data/  documentation/  hardware/  investor-relations/
 │
 ├── workflows/            Cross-department processes (e.g. the SDLC)
 ├── standards/            Company-wide standards

@@ -13,10 +13,22 @@ your kind of company.
 
 ## Available
 
-| Starter kit | Status |
+| Starter kit | For |
 |---|---|
-| [ai-startup/](ai-startup/) | ✅ Exemplar |
-| saas · developer-tools · enterprise-b2b · marketplace · consumer-app · robotics · drone · embedded · hardware · iot · research-lab | 🧭 Planned — follow the ai-startup pattern |
+| [ai-startup/](ai-startup/) | AI-native product companies (exemplar) |
+| [saas/](saas/) | Multi-tenant subscription software |
+| [developer-tools/](developer-tools/) | APIs, SDKs, CLIs, developer platforms |
+| [enterprise-b2b/](enterprise-b2b/) | Selling to large organizations (compliance, procurement) |
+| [marketplace/](marketplace/) | Two-sided supply/demand platforms |
+| [consumer-app/](consumer-app/) | High-scale consumer apps (engagement, growth) |
+| [robotics/](robotics/) | Autonomous physical robots (hardware + AI) |
+| [drone/](drone/) | UAVs (safety-critical, regulated) |
+| [embedded/](embedded/) | Firmware on constrained hardware |
+| [iot/](iot/) | Fleets of connected devices + cloud |
+| [research-lab/](research-lab/) | Research-first, IP-driven organizations |
+
+Each kit inherits all of core Company OS and adds only its domain deltas (agents, standards, workflows,
+getting-started).
 
 ## To add a starter kit
 
