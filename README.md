@@ -86,3 +86,9 @@ and fill it in. To add an agent, copy [agents/agent-template.md](agents/agent-te
 
 > The original single-file operating manual that seeded this repository was decomposed into the
 > structure above. Its full text is preserved in git history (pre-decomposition `README.md`).
+
+---
+
+## License
+
+Company OS is released under the [MIT License](LICENSE) — free to clone, customize, and use commercially.
