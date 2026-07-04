@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question or help
+    url: https://github.com/rojenwai/AI-Company-Repo/discussions
+    about: Ask a question or get help using Company OS (see SUPPORT.md).
+  - name: Roadmap
+    url: https://github.com/rojenwai/AI-Company-Repo/blob/main/docs/ROADMAP.md
+    about: See what's already planned before proposing something new.

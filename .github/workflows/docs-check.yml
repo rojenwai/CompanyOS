@@ -1,0 +1,24 @@
+name: Docs check
+
+# Validates the integrity of the Company OS documentation on every push and PR.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Internal link integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify internal Markdown links
+        run: python scripts/check-links.py

@@ -1,0 +1,10 @@
+# Funding options shown on the repo's "Sponsor" button.
+# Uncomment and fill in the ones you use; delete the rest. See:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+# github: [your-username]            # GitHub Sponsors username(s)
+# ko_fi: your-username               # Ko-fi
+# buy_me_a_coffee: your-username     # Buy Me a Coffee
+# open_collective: your-collective   # Open Collective
+# patreon: your-username             # Patreon
+# custom: ["https://your-site.com/donate"]

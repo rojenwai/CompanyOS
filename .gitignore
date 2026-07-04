@@ -1,0 +1,25 @@
+# Claude Code / AI tooling
+.claude/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Environment / secrets
+.env
+.env.*
+*.local
+
+# Node / build (for future starter kits)
+node_modules/
+dist/
+build/
+coverage/
+*.log
