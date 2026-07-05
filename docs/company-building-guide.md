@@ -92,7 +92,7 @@ Positioning, messaging, SEO/content, growth channels, launches → [strategy/go-
 *Why:* a great product no one hears about fails.
 
 ### 11. Sales — 🟢–🔵 (founder sells first)
-The funnel (awareness → advocacy), discovery calls, closing, customer success → [strategy/go-to-market.md](../strategy/go-to-market.md).
+The [selling method](../sales/methodology.md) (qualify → discover → value → close), [buyer psychology](../sales/psychology.md), and [where to sell](../sales/channels.md) → [sales/](../sales/README.md).
 *Why:* founders must close the first ~100 customers themselves.
 
 ### 12. Legal & compliance — 🟢 (hire depth)
@@ -100,8 +100,8 @@ Incorporation, IP/patents/trademarks, contracts, privacy (GDPR), terms, open-sou
 data-protection → owned by the [Chief Legal Officer](../company/roles.md). *Why:* mistakes here are expensive and slow to fix.
 
 ### 13. Operations & people (HR) — 🟢
-Hiring, onboarding, meetings, project management, vendor & asset management, culture. *Why:* the company
-is the product too. (`operations/` and `hr/` are planned departments — build from the [template](../templates/department-template/).)
+Hiring, onboarding, meetings, project management, vendor & asset management, culture →
+[operations/](../operations/README.md) and [hr/](../hr/README.md). *Why:* the company is the product too.
 
 ### 14. Security — 🟢 (hire depth)
 Threat modeling, encryption, auth, compliance, incident readiness → [engineering/security-standards.md](../engineering/security-standards.md)
@@ -130,14 +130,14 @@ The end-to-end journey from an idea to a scaling business. Each step names the *
 ### Step 0 — Prepare yourself
 **Outcome:** enough literacy and the right mindset. **Do:** skim Part A; adopt the [core principles](../company/principles.md); accept that you'll delegate most execution to hires and [agents](../agents/README.md).
 
-### Step 1 — Find a real problem
-**Outcome:** a validated, painful, worth-years problem. **Do:** run [problem discovery](../product/discovery.md); score it with the [problem-evaluation criteria](../strategy/startup-lifecycle.md). **Gate:** problem validated with evidence.
+### Step 1 — Generate & find a real problem
+**Outcome:** a shortlist of problem-framed ideas, then one validated, painful, worth-years problem. **Do:** [brainstorm ideas](../research/ideation.md) (diverge then converge), then run [problem discovery](../product/discovery.md); score with the [problem-evaluation criteria](../strategy/startup-lifecycle.md). **Gate:** problem validated with evidence.
 
 ### Step 2 — Research the space
 **Outcome:** you understand the market, competitors, and technical feasibility. **Do:** [research framework](../research/research-framework.md); [competitive analysis](../strategy/market-analysis.md). **Gate:** opportunity confirmed.
 
 ### Step 3 — Validate demand
-**Outcome:** proof people want this and will pay. **Do:** interviews, landing pages, waitlists, pricing tests; size [TAM/SAM/SOM](../strategy/market-analysis.md). **Gate:** clear demand identified.
+**Outcome:** proof people want this and will pay. **Do:** climb the [validation ladder](../strategy/idea-validation.md) - interviews, landing pages, fake doors, pre-sales; size [TAM/SAM/SOM](../strategy/market-analysis.md). **Gate:** clear demand identified (real signals, not compliments).
 
 ### Step 4 — Choose a business model
 **Outcome:** how you create and capture value. **Do:** pick a [model & pricing](../strategy/business-model.md); sanity-check [unit economics](../strategy/unit-economics.md). **Gate:** viable model.
@@ -158,13 +158,13 @@ The end-to-end journey from an idea to a scaling business. Each step names the *
 **Outcome:** the product is live with a safety net. **Do:** the [launch playbook](../playbooks/launching-a-product.md) — pass the [launch checklist](../product/quality-gates.md), wire [monitoring](../post-launch/monitoring.md), prepare [rollback](../post-launch/rollback.md). **Gate:** launched, instrumented, reversible.
 
 ### Step 10 — Get customers (go-to-market)
-**Outcome:** a repeatable way to acquire users. **Do:** [GTM](../strategy/go-to-market.md); founder-led sales for the first ~100; run the [funnel](../strategy/go-to-market.md). **Gate:** a channel that reliably brings customers.
+**Outcome:** a repeatable way to acquire users. **Do:** [GTM](../strategy/go-to-market.md); pick a [channel & sales motion](../sales/channels.md); sell founder-led for the first ~100 using the [sales method](../sales/methodology.md) and honest [buyer psychology](../sales/psychology.md). **Gate:** a channel that reliably brings customers at viable CAC.
 
 ### Step 11 — Reach product-market fit
 **Outcome:** evidence the market pulls the product. **Do:** measure the [PMF indicators](../product/metrics.md); iterate via the [continuous improvement loop](../post-launch/continuous-improvement.md). **Gate:** strong retention + organic pull.
 
 ### Step 12 — Raise capital (if needed)
-**Outcome:** funded runway to scale. **Do:** prepare the [fundraising pack](../strategy/unit-economics.md); tell the story; know your numbers. **Gate:** funded — or a profitable path without it.
+**Outcome:** funded runway to scale. **Do:** [find the right investors](../strategy/finding-investors.md) for your stage; [pitch](../strategy/pitching.md) the story; prepare the [fundraising pack](../strategy/unit-economics.md) and know your numbers; run the [fundraising playbook](../playbooks/fundraising.md). **Gate:** funded — or a profitable path without it.
 
 ### Step 13 — Scale
 **Outcome:** growth without breaking. **Do:** scale [people, process, infra, automation](../strategy/unit-economics.md) only after repeatable sales and healthy [unit economics](../strategy/unit-economics.md). **Gate:** growth with stable reliability & margins.

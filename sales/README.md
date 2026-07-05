@@ -24,6 +24,10 @@ Sales turns qualified interest into paying customers and durable relationships. 
 | [dashboards.md](dashboards.md) | How metrics are surfaced |
 | [tools.md](tools.md) | Tooling used |
 
+### Domain deep-dives
+- [methodology.md](methodology.md) - how to sell: the end-to-end selling method
+- [psychology.md](psychology.md) - buyer psychology and ethical persuasion
+- [channels.md](channels.md) - where to sell: channels and sales motions
 
 ## Interfaces
 

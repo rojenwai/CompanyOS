@@ -24,6 +24,8 @@ Marketing makes the right customers aware of, and drawn to, the product. It owns
 | [dashboards.md](dashboards.md) | How metrics are surfaced |
 | [tools.md](tools.md) | Tooling used |
 
+### Domain deep-dives
+- [psychology.md](psychology.md) - persuasion and behavioral psychology (used honestly)
 
 ## Interfaces
 

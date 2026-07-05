@@ -26,11 +26,14 @@ Strategy builds the company around the product. It owns the startup lifecycle, m
 
 
 ### Domain deep-dives
+- [idea-validation.md](idea-validation.md) - validating an idea cheaply before building
 - [startup-lifecycle.md](startup-lifecycle.md) - stages from problem to product definition
 - [market-analysis.md](market-analysis.md) - TAM/SAM/SOM, SWOT, Porter, PESTLE, Blue Ocean
 - [business-model.md](business-model.md) - models, revenue, pricing
 - [unit-economics.md](unit-economics.md) - CAC/LTV, financials, fundraising, scaling
 - [go-to-market.md](go-to-market.md) - growth, GTM, sales funnel, customer success
+- [pitching.md](pitching.md) - how to pitch (investors and customers)
+- [finding-investors.md](finding-investors.md) - where to find investors and how to reach them
 
 ## Interfaces
 

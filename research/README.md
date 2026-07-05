@@ -26,6 +26,7 @@ Research discovers opportunities others overlook and turns them into defensible 
 
 
 ### Domain deep-dives
+- [ideation.md](ideation.md) - brainstorming and idea generation (Stage 0)
 - [research-framework.md](research-framework.md) - the end-to-end research method
 - [innovation-framework.md](innovation-framework.md) - types of innovation and the review board
 - [first-principles.md](first-principles.md) - breaking problems to fundamentals
