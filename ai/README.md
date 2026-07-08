@@ -30,6 +30,7 @@ AI is treated as an engineering discipline, not prompt-writing. This department 
 - [prompt-engineering.md](prompt-engineering.md) - prompt standards and versioning
 - [evaluation-and-testing.md](evaluation-and-testing.md) - how models are proven
 - [ai-security.md](ai-security.md) - threats and defenses
+- [Technology readiness (TRL)](../research/technology-readiness.md) - maturity of novel models, from lab to production
 
 ## Interfaces
 

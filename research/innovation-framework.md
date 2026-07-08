@@ -24,5 +24,9 @@ Before approving a major initiative, answer: Is the problem significant? Is the 
 build it? Can we defend it? Will customers pay? Can we scale globally? Does it align with the mission?
 Is now the right time?
 
+For deep-tech bets, "can we build it?" is answered honestly with a
+[Technology Readiness Level](technology-readiness.md) - a novel technology at TRL 3 is a research bet, not
+a product decision.
+
 Decisions are recorded to [decision memory](../memory/decision-memory.md); opportunities are ranked via
 [opportunity-scoring.md](opportunity-scoring.md).

@@ -24,6 +24,8 @@ Hardware designs, builds, and validates physical products - firmware, electronic
 | [dashboards.md](dashboards.md) | How metrics are surfaced |
 | [tools.md](tools.md) | Tooling used |
 
+### Domain deep-dives
+- [Technology readiness (TRL)](../research/technology-readiness.md) - the 1-9 maturity scale hardware lives by, mapped to design and test gates
 
 ## Interfaces
 

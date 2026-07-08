@@ -31,6 +31,7 @@ Research discovers opportunities others overlook and turns them into defensible 
 - [innovation-framework.md](innovation-framework.md) - types of innovation and the review board
 - [first-principles.md](first-principles.md) - breaking problems to fundamentals
 - [opportunity-scoring.md](opportunity-scoring.md) - ranking what to pursue
+- [technology-readiness.md](technology-readiness.md) - TRL 1-9: how mature a technology is
 - [research-ethics.md](research-ethics.md) - integrity and IP rules
 
 ## Interfaces
