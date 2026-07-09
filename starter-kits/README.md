@@ -26,12 +26,17 @@ your kind of company.
 | [embedded/](embedded/) | Firmware on constrained hardware |
 | [iot/](iot/) | Fleets of connected devices + cloud |
 | [research-lab/](research-lab/) | Research-first, IP-driven organizations |
+| [fintech/](fintech/) | Moving, storing, or lending money (licensing, ledgers, fraud) |
+| [healthtech/](healthtech/) | Patient care, clinical decisions, or health data |
+| [climate-tech/](climate-tech/) | Energy, materials, carbon, decarbonisation (TRL-gated, MRV) |
+| [gaming/](gaming/) | Games as a live product (fun, retention, live-ops) |
+| [edtech/](edtech/) | Learning products (efficacy, accessibility, student data) |
 
 Each kit inherits all of core Company OS and adds only its domain deltas (agents, standards, workflows,
-getting-started).
+getting-started). **Delete the kits you don't use** — see [CUSTOMIZE.md](../CUSTOMIZE.md).
 
 ## To add a starter kit
 
 1. Create `starter-kits/<company-type>/`.
 2. Write a `README.md` stating what it **inherits** and what it **adds/overrides**.
-3. Add only the domain deltas (agents, standards, workflows, getting-started); link to core for everything else.
+3. Add only the domain deltas (`agents.md`, `standards.md`, `workflows.md`, `getting-started.md`); link to core for everything else.

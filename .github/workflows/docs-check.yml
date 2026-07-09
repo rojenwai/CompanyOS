@@ -25,3 +25,6 @@ jobs:
 
       - name: Verify structural conventions
         run: python scripts/check-structure.py
+
+      - name: Verify authoring conventions
+        run: python scripts/check-conventions.py

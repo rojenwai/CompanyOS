@@ -1,15 +1,15 @@
 # Marketplace - Added / Activated
 
-Beyond the core [agents](../../agents/README.md), this kit leans on these departments and agents.
-Write any new agents from the [agent template](../../agents/agent-template.md).
+Beyond the core [agents](../../ai/agents/README.md), this kit leans on these departments and agents.
+Write any new agents from the [agent template](../../ai/agents/agent-template.md).
 
 ## Departments to activate first
 
-- [data/](../../data/README.md) - matching, liquidity, and marketplace health metrics
-- [finance/](../../finance/README.md) - payments, payouts, take-rate, fraud
-- [operations/](../../operations/README.md) - supply onboarding and trust & safety ops
-- [security/](../../security/README.md) - fraud, trust & safety, identity
+- [data/](../../handbook/departments/data/README.md) - matching, liquidity, and marketplace health metrics
+- [finance/](../../handbook/departments/finance/README.md) - payments, payouts, take-rate, fraud
+- [operations/](../../handbook/departments/operations/README.md) - supply onboarding and trust & safety ops
+- [security/](../../handbook/departments/security/README.md) - fraud, trust & safety, identity
 
 ## Emphasis
 
-Emphasize the [Data Scientist Agent](../../agents/data/data-scientist-agent.md) for matching/liquidity, [Revenue & Billing Agent](../../agents/finance/revenue-billing-agent.md) for payments, and trust & safety operations.
+Emphasize the [Data Scientist Agent](../../ai/agents/data/data-scientist-agent.md) for matching/liquidity, [Revenue & Billing Agent](../../ai/agents/finance/revenue-billing-agent.md) for payments, and trust & safety operations.

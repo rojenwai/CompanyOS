@@ -1,0 +1,227 @@
+# The Company-Building Guide
+
+> The single front-to-back guide to **what you need to learn** and **what you actually do** to build
+> and run a company on [Company OS](../../README.md). Every step links to the part of the OS that does the
+> work — so this guide is both a syllabus and a map.
+
+**You do not have to master everything.** A founder needs *working literacy* across all functions and
+*depth* in one or two. Everything else is delegated — to hires or to the [AI agent workforce](../../ai/agents/README.md).
+This guide tells you what "working literacy" means for each area and where the OS carries the load.
+
+- **Part A — Skills to learn** (the syllabus)
+- **Part B — Steps to build a company** (zero → launch → scale)
+- **Part C — Steps to manage a company** (the ongoing operating rhythm)
+- **Part D — What kills companies** (avoidable mistakes)
+
+---
+
+## Part A — Skills to learn
+
+Legend for **depth**: 🟢 Working literacy (know enough to make decisions & hire) · 🔵 Go deep (a founder edge).
+
+### 1. Foundational / meta skills — 🔵 everyone
+The skills under every other skill.
+
+| Skill | Why it matters | Learn by |
+|---|---|---|
+| First-principles thinking | Avoid copying; find better solutions | [research/first-principles.md](../departments/research/first-principles.md) |
+| Decision-making under uncertainty | Most founder work is deciding with incomplete data | [governance/decision-framework.md](../governance/decision-framework.md) |
+| Evidence over assumption | Kills expensive guesses early | [company/principles.md](../company/principles.md) |
+| Clear written communication | Reports, PRDs, pitches, hiring — all writing | [governance/communication-rules.md](../governance/communication-rules.md) |
+| Systems thinking & prioritization | Spend limited time on the highest-leverage thing | [product/decision-frameworks.md](../departments/product/decision-frameworks.md) |
+| Learning how to learn | You will enter ten fields you don't know | [research/research-framework.md](../departments/research/research-framework.md) |
+
+### 2. Leadership & management — 🔵 founder/CEO
+| Skill | Why | Where in OS |
+|---|---|---|
+| Setting vision & strategy | Aligns everyone on where and why | [company/vision.md](../company/vision.md) · [product/vision.md](../departments/product/vision.md) |
+| Delegation & orchestration | The CEO delegates, never implements | [orchestration/ceo-agent.md](../../ai/orchestration/ceo-agent.md) |
+| Hiring & team building | Your #1 multiplier | see Part C, and `hr/` (planned) |
+| Running a cadence (meetings, reviews) | Turns strategy into execution | [templates/documents/meeting-notes.md](../templates/documents/meeting-notes.md) |
+| Conflict resolution | Cross-functional friction is constant | [orchestration/execution-lifecycle.md](../../ai/orchestration/execution-lifecycle.md) |
+
+### 3. Product — 🔵 (most important single skill for a tech founder)
+| Skill | Why | Where |
+|---|---|---|
+| Customer discovery & JTBD | Build the right thing | [product/discovery.md](../departments/product/discovery.md) |
+| Writing requirements (PRDs, stories) | Unambiguous build instructions | [product/requirements.md](../departments/product/requirements.md) |
+| Prioritization (RICE/MoSCoW/Kano) | Say no to 90% | [product/decision-frameworks.md](../departments/product/decision-frameworks.md) |
+| Defining an MVP | Ship the smallest useful thing | [agents/product/mvp-planning-agent.md](../../ai/agents/product/mvp-planning-agent.md) |
+| Metrics & product-market fit | Know if it's working | [product/metrics.md](../departments/product/metrics.md) |
+
+### 4. Engineering / technical — 🟢–🔵 (deep if you're the technical founder)
+| Skill | Why | Where |
+|---|---|---|
+| Architecture & trade-offs | Foundational decisions are expensive to reverse | [engineering/organization.md](../departments/engineering/organization.md) · [templates/documents/adr.md](../templates/documents/adr.md) |
+| Coding standards & review | Quality that lasts | [engineering/standards.md](../departments/engineering/standards.md) · [engineering/review-process.md](../departments/engineering/review-process.md) |
+| Testing discipline | Ship without fear | [engineering/testing-standards.md](../departments/engineering/testing-standards.md) |
+| Delivery (git, CI/CD, releases) | Ship safely and often | [engineering/workflows.md](../departments/engineering/workflows.md) |
+| The full lifecycle | No phase skipped | [workflows/sdlc.md](../workflows/sdlc.md) |
+
+### 5. AI / ML — 🟢–🔵 (deep for an AI-native company)
+| Skill | Why | Where |
+|---|---|---|
+| AI as engineering (not prompt-writing) | Reliability, not demos | [ai/README.md](../departments/ai-engineering/README.md) |
+| RAG & grounding | Accuracy over hallucination | [ai/README.md](../departments/ai-engineering/README.md#retrieval-augmented-generation-rag) |
+| Evaluation & testing | Prove the model is good | [ai/evaluation-and-testing.md](../departments/ai-engineering/evaluation-and-testing.md) |
+| Cost & model selection | Margins depend on it | [ai/README.md](../departments/ai-engineering/README.md#cost-optimization) |
+| AI security | Prompt injection, data leakage | [ai/ai-security.md](../departments/ai-engineering/ai-security.md) |
+
+### 6. Design — 🟢
+UX research, information architecture, the design system, accessibility, interaction design →
+[design/README.md](../departments/design/README.md). *Why:* usability and trust are product features.
+
+### 7. Research & innovation — 🟢
+Market/technical/scientific/patent research, opportunity scoring, competitive intelligence →
+[research/README.md](../departments/research/README.md). *Why:* it answers "what should we build next?"
+
+### 8. Business & strategy — 🔵 founder
+| Skill | Why | Where |
+|---|---|---|
+| Market sizing (TAM/SAM/SOM) | Is this big enough? | [strategy/market-analysis.md](../departments/strategy/market-analysis.md) |
+| Business models & pricing | How you make money | [strategy/business-model.md](../departments/strategy/business-model.md) |
+| Competitive analysis (SWOT/Porter/PESTLE) | Where you win | [strategy/market-analysis.md](../departments/strategy/market-analysis.md) |
+| Unit economics (CAC/LTV) | Whether the business works | [strategy/unit-economics.md](../departments/strategy/unit-economics.md) |
+
+### 9. Finance — 🟢 (hire depth early)
+Forecasting, runway, budgeting, fundraising, financial models → [strategy/unit-economics.md](../departments/strategy/unit-economics.md).
+*Why:* running out of cash is the #1 killer. Know your runway to the week.
+
+### 10. Marketing & growth — 🟢
+Positioning, messaging, SEO/content, growth channels, launches → [strategy/go-to-market.md](../departments/strategy/go-to-market.md).
+*Why:* a great product no one hears about fails.
+
+### 11. Sales — 🟢–🔵 (founder sells first)
+The [selling method](../departments/sales/methodology.md) (qualify → discover → value → close), [buyer psychology](../departments/sales/psychology.md), and [where to sell](../departments/sales/channels.md) → [sales/](../departments/sales/README.md).
+*Why:* founders must close the first ~100 customers themselves.
+
+### 12. Legal & compliance — 🟢 (hire depth)
+Incorporation, IP/patents/trademarks, contracts, privacy (GDPR), terms, open-source licensing,
+data-protection → owned by the [Chief Legal Officer](../company/roles.md). *Why:* mistakes here are expensive and slow to fix.
+
+### 13. Operations & people (HR) — 🟢
+Hiring, onboarding, meetings, project management, vendor & asset management, culture →
+[operations/](../departments/operations/README.md) and [hr/](../departments/hr/README.md). *Why:* the company is the product too.
+
+### 14. Security — 🟢 (hire depth)
+Threat modeling, encryption, auth, compliance, incident readiness → [engineering/security-standards.md](../departments/engineering/security-standards.md)
+· [ai/ai-security.md](../departments/ai-engineering/ai-security.md). *Why:* one breach can end a company's trust.
+
+### 15. Customer success & support — 🟢
+Onboarding, health scoring, churn/renewal, feedback loops → [post-launch/support.md](../departments/post-launch/support.md).
+*Why:* retention beats acquisition; keeping customers compounds.
+
+### 16. Founder personal skills — 🔵
+Resilience, time management, energy management, saying no, fundraising storytelling, and knowing when to
+delegate. *Why:* the founder is the constraint most often.
+
+> **How to learn any of these fast:** run the [research workflow](../departments/research/research-framework.md) —
+> define a sharp question, gather multiple sources, organize, form a hypothesis, then *do* the thing and
+> validate. Learning-by-shipping beats learning-by-reading.
+
+---
+
+## Part B — Steps to build a company
+
+The end-to-end journey from an idea to a scaling business. Each step names the **outcome**, the
+**actions**, and the **OS home** where the work lives. This is the [SDLC](../workflows/sdlc.md) and the
+[startup lifecycle](../departments/strategy/startup-lifecycle.md) told as a founder's to-do list.
+
+### Step 0 — Prepare yourself
+**Outcome:** enough literacy and the right mindset. **Do:** skim Part A; adopt the [core principles](../company/principles.md); accept that you'll delegate most execution to hires and [agents](../../ai/agents/README.md).
+
+### Step 1 — Generate & find a real problem
+**Outcome:** a shortlist of problem-framed ideas, then one validated, painful, worth-years problem. **Do:** [brainstorm ideas](../departments/research/ideation.md) (diverge then converge), then run [problem discovery](../departments/product/discovery.md); score with the [problem-evaluation criteria](../departments/strategy/startup-lifecycle.md). **Gate:** problem validated with evidence.
+
+### Step 2 — Research the space
+**Outcome:** you understand the market, competitors, and technical feasibility. **Do:** [research framework](../departments/research/research-framework.md); [competitive analysis](../departments/strategy/market-analysis.md). **Gate:** opportunity confirmed.
+
+### Step 3 — Validate demand
+**Outcome:** proof people want this and will pay. **Do:** climb the [validation ladder](../departments/strategy/idea-validation.md) - interviews, landing pages, fake doors, pre-sales; size [TAM/SAM/SOM](../departments/strategy/market-analysis.md). **Gate:** clear demand identified (real signals, not compliments).
+
+### Step 4 — Choose a business model
+**Outcome:** how you create and capture value. **Do:** pick a [model & pricing](../departments/strategy/business-model.md); sanity-check [unit economics](../departments/strategy/unit-economics.md). **Gate:** viable model.
+
+### Step 5 — Handle the legal foundation
+**Outcome:** a real company you can operate safely. **Do:** incorporate; found­ers' agreements & equity; IP assignment; bank account; basic contracts, privacy policy & terms (Chief Legal Officer scope → [company/roles.md](../company/roles.md)). **Gate:** legally able to hire, sell, and raise.
+
+### Step 6 — Stand up Company OS & the team
+**Outcome:** an operating system and the people/agents to run it. **Do:** adopt [company](../company/README.md) + [governance](../governance/README.md) + the [kernel](../../ai/orchestration/README.md); activate the [agents](../../ai/agents/README.md) you need; hire your first critical roles. **Gate:** work can be routed, reviewed, and shipped.
+
+### Step 7 — Define the product
+**Outcome:** a clear, prioritized plan. **Do:** [product definition](../departments/product/README.md); write the [PRD](../departments/product/requirements.md); scope the [MVP](../../ai/agents/product/mvp-planning-agent.md). **Gate:** requirements ready; stories at [Definition of Ready](../departments/engineering/definition-of-ready.md).
+
+### Step 8 — Design & build the MVP
+**Outcome:** the smallest useful product. **Do:** [design](../departments/design/README.md) → [architecture](../departments/engineering/organization.md) → build through the [SDLC](../workflows/sdlc.md) with [tests](../departments/engineering/testing-standards.md) and [security review](../departments/engineering/security-standards.md). Follow the [build-an-MVP playbook](../playbooks/building-an-mvp.md). **Gate:** [Definition of Done](../departments/engineering/quality-gates.md).
+
+### Step 9 — Launch
+**Outcome:** the product is live with a safety net. **Do:** the [launch playbook](../playbooks/launching-a-product.md) — pass the [launch checklist](../departments/product/quality-gates.md), wire [monitoring](../departments/post-launch/monitoring.md), prepare [rollback](../departments/post-launch/rollback.md). **Gate:** launched, instrumented, reversible.
+
+### Step 10 — Get customers (go-to-market)
+**Outcome:** a repeatable way to acquire users. **Do:** [GTM](../departments/strategy/go-to-market.md); pick a [channel & sales motion](../departments/sales/channels.md); sell founder-led for the first ~100 using the [sales method](../departments/sales/methodology.md) and honest [buyer psychology](../departments/sales/psychology.md). **Gate:** a channel that reliably brings customers at viable CAC.
+
+### Step 11 — Reach product-market fit
+**Outcome:** evidence the market pulls the product. **Do:** measure the [PMF indicators](../departments/product/metrics.md); iterate via the [continuous improvement loop](../departments/post-launch/continuous-improvement.md). **Gate:** strong retention + organic pull.
+
+### Step 12 — Raise capital (if needed)
+**Outcome:** funded runway to scale. **Do:** [find the right investors](../departments/strategy/finding-investors.md) for your stage; [pitch](../departments/strategy/pitching.md) the story; prepare the [fundraising pack](../departments/strategy/unit-economics.md) and know your numbers; run the [fundraising playbook](../playbooks/fundraising.md). **Gate:** funded — or a profitable path without it.
+
+### Step 13 — Scale
+**Outcome:** growth without breaking. **Do:** scale [people, process, infra, automation](../departments/strategy/unit-economics.md) only after repeatable sales and healthy [unit economics](../departments/strategy/unit-economics.md). **Gate:** growth with stable reliability & margins.
+
+### Step 14 — Expand & lead the category
+**Outcome:** durable advantage. **Do:** [international expansion](../departments/strategy/unit-economics.md); build moats toward [category leadership](../departments/strategy/README.md). **Gate:** the default choice in your market.
+
+---
+
+## Part C — Steps to manage a company (the operating rhythm)
+
+Building is finite; managing is forever. Management is a set of **cadences** that keep the company
+healthy. Run these continuously.
+
+### The rhythm
+| Cadence | You do | OS home |
+|---|---|---|
+| **Daily** | Watch health/incidents; unblock people | [post-launch/monitoring.md](../departments/post-launch/monitoring.md) · [on-call](../departments/post-launch/on-call.md) |
+| **Weekly** | Team syncs; metrics review; unblock; ship | [templates/documents/status-report.md](../templates/documents/status-report.md) |
+| **Per sprint** | Plan → build → review → retro; repay [tech debt](../departments/post-launch/technical-debt/repayment-plan.md) | [engineering/workflows.md](../departments/engineering/workflows.md) |
+| **Per release** | [Launch playbook](../playbooks/launching-a-product.md) + [continuous improvement](../departments/post-launch/continuous-improvement.md) | [post-launch/release-management.md](../departments/post-launch/release-management.md) |
+| **Monthly** | Financials & runway; hiring; customer health | [strategy/unit-economics.md](../departments/strategy/unit-economics.md) · [post-launch/support.md](../departments/post-launch/support.md) |
+| **Quarterly** | Strategy & roadmap review; OKRs; [product evolution](../departments/post-launch/product-evolution.md) | [product/roadmap.md](../departments/product/roadmap.md) |
+| **Annually** | Vision refresh; budget; category strategy | [company/vision.md](../company/vision.md) · [strategy/README.md](../departments/strategy/README.md) |
+
+### The management surfaces you own
+- **People** — hire, onboard, grow, and retain (culture, roles, feedback).
+- **Money** — runway, budget, unit economics, fundraising ([finance](../departments/strategy/unit-economics.md)).
+- **Customers** — success, retention, feedback → roadmap ([post-launch/support.md](../departments/post-launch/support.md), [customer-feedback.md](../departments/post-launch/customer-feedback.md)).
+- **Product** — direction, prioritization, PMF, evolution ([product/](../departments/product/README.md)).
+- **Reliability** — uptime, incidents, maintenance, security ([post-launch/](../departments/post-launch/README.md)).
+- **Risk** — legal, security, compliance, and [decision governance](../governance/README.md).
+
+### Manage by delegation
+The CEO's job is to **orchestrate, not execute** ([ceo-agent.md](../../ai/orchestration/ceo-agent.md)). Route
+work to the right [division](../../ai/agents/README.md), let [reviewers](../../ai/orchestration/reviewer.md) gate
+quality, keep [Human-in-the-Loop](../../ai/orchestration/approval-engine.md) for high-risk calls, and capture
+every lesson to [memory](../../ai/memory/lessons-learned.md) so the company compounds.
+
+---
+
+## Part D — What kills companies (and the antidote)
+
+| Failure | Antidote in Company OS |
+|---|---|
+| Building something nobody wants | [Discovery](../departments/product/discovery.md) & demand validation **before** building |
+| Running out of cash | Weekly runway tracking; [unit economics](../departments/strategy/unit-economics.md) |
+| No focus (building everything) | Ruthless [prioritization](../departments/product/decision-frameworks.md) & [MVP](../../ai/agents/product/mvp-planning-agent.md) |
+| Shipping unreliable software | [Quality gates](../governance/quality-gates.md), [testing](../departments/engineering/testing-standards.md), [reviews](../departments/engineering/review-process.md) |
+| No one hears about it | [Go-to-market](../departments/strategy/go-to-market.md) from day one |
+| Churn eats growth | [Customer success](../departments/post-launch/support.md) & retention focus |
+| Founder burnout | Delegate to hires & [agents](../../ai/agents/README.md); own only what only you can |
+| Repeating mistakes | [Lessons learned](../../ai/memory/lessons-learned.md) + [continuous improvement](../departments/post-launch/continuous-improvement.md) |
+| Security/legal blowups | [Security](../departments/engineering/security-standards.md) & [legal](../company/roles.md) as gates, not afterthoughts |
+
+---
+
+**Where to go next:** the [Company OS hub](../../README.md) · the [SDLC](../workflows/sdlc.md) ·
+the [startup lifecycle](../departments/strategy/startup-lifecycle.md). This guide is the trailhead; the departments
+do the work.

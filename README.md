@@ -2,7 +2,7 @@
 
 > **The open-source operating system for AI-native technology companies.**
 >
-> Version: 2.0 · Clone it, customize it, and run a company from idea to global scale.
+> Version: 2.1 · Clone it, customize it, and run a company from idea to global scale.
 
 Company OS is not a prompt repository, a code template, or a business plan. It is the **central
 source of truth** for how an AI-native company operates: organizational structure, engineering
@@ -17,174 +17,219 @@ predictable, extensible, and repeatable.
 
 ---
 
+## Two sides, so it's easy to customize
+
+The repository is split down the middle. Know which side you're on and customization is obvious:
+
+| | [handbook/](handbook/README.md) — what humans **read** | [ai/](ai/README.md) — what the AI **runs on** |
+|---|---|---|
+| **Contains** | Company identity, governance, 20 department manuals, workflows, standards, playbooks, templates, guides | 93 agent specs, the orchestration kernel, the memory system |
+| **You edit it to** | Describe how *your* company works | Change which agents exist and how work is routed |
+| **Audience** | Founders, employees, new hires | The agent workforce |
+
+---
+
+## How to customize
+
+Company OS ships complete. Making it *yours* is mostly **deleting what you don't need** and **filling in
+who you are**. Do it in this order:
+
+**1. Make it your company** *(~30 min)* — edit these five files. They are the only place your identity is
+defined; everything else refers back to them.
+[mission](handbook/company/mission.md) · [vision](handbook/company/vision.md) · [principles](handbook/company/principles.md) · [structure](handbook/company/structure.md) · [roles](handbook/company/roles.md)
+
+**2. Pick a starter kit** *(~10 min)* — choose the [kit](#starter-kits) matching your company type. It tells
+you which departments to activate first and adds domain standards. Delete the other kits.
+
+**3. Keep only the departments you need** *(~30 min)* — you don't need all twenty on day one. A typical
+early-stage software company runs `product`, `engineering`, `design`, `post-launch`, `strategy`.
+To remove one: delete `handbook/departments/<name>/` and `ai/agents/<name>/`, drop its rows from the
+indexes, remove it from `DEPARTMENT_NAMES` in [scripts/check-structure.py](scripts/check-structure.py), then
+run the checks below.
+To add one: `python scripts/scaffold.py department <name>`.
+
+**4. Choose your agents** *(~20 min)* — open [ai/agents/README.md](ai/agents/README.md), keep the agents
+you'll actually run, delete the rest. To add one: `python scripts/scaffold.py agent <department> <agent-name>`.
+
+**5. Tune the rules** *(ongoing)* — adjust [quality gates](handbook/governance/quality-gates.md), the
+[decision framework](handbook/governance/decision-framework.md), and each department's `standards.md` to
+match how strict you want to be.
+
+### What to edit, at a glance
+
+| | Files | Guidance |
+|---|---|---|
+| ✏️ **Always** | `handbook/company/*`, `ai/agents/*` | This *is* your company and your workforce |
+| ⚙️ **Often** | department `standards.md`, `metrics.md`, `quality-gates.md`, `governance/*` | Tune to your bar |
+| 📖 **Read, don't edit** | `handbook/guides/*` | Guidance for you, not config |
+| 🔒 **Leave alone** | `handbook/templates/*`, `STRUCTURE.md`, `scripts/*`, `.github/*` | The framework that keeps it consistent |
+
+### Verify your changes
+
+```bash
+python scripts/check-links.py        # every internal link resolves
+python scripts/check-structure.py    # departments + agent specs conform
+python scripts/check-conventions.py  # README per folder, no placeholder text
+```
+
+All three run in CI on every push and PR. If you removed a department, `check-links.py` points you at every
+link that still references it.
+
+👉 Full detail, including how to add a department or agent by hand: **[CUSTOMIZE.md](CUSTOMIZE.md)**.
+
+---
+
 ## Folder structure
 
 ```
-company-os/                        the repository root IS Company OS
+company-os/
 │
-├── company/                       identity: mission, vision, principles, structure, roles
-├── governance/                    decision framework, quality gates, communication, definition of done
+├── handbook/                  ◀── EVERYTHING YOU READ ─────────────────────────
+│   ├── company/                   identity: mission, vision, principles, structure, roles
+│   ├── governance/                decision framework, quality gates, definition of done
+│   │
+│   ├── departments/               20 department manuals, each the same 18-file shape:
+│   │   ├── engineering/  product/  design/  post-launch/  ai-engineering/
+│   │   ├── research/  strategy/  data/  hardware/
+│   │   ├── marketing/  sales/  customer-success/
+│   │   └── operations/  hr/  finance/  legal/  security/  devops/
+│   │       documentation/  investor-relations/
+│   │           └─ README · mission · vision · principles · organization · roles
+│   │              agents · workflows · playbooks · sops · decision-frameworks
+│   │              standards · review-process · quality-gates · automation
+│   │              metrics · dashboards · tools + templates/ checklists/ examples/
+│   │
+│   ├── workflows/                 cross-department processes (the 20-phase SDLC)
+│   ├── standards/                 index of every company-wide standard
+│   ├── playbooks/                 brainstorm · MVP · launch · sprint · hiring · fundraising
+│   ├── templates/                 department-template/ + documents/ (PRD, RFC, ADR, OKR…)
+│   └── guides/                    company-building-guide · onboarding-paths · okrs · example-company
 │
-├── orchestration/                 the kernel: CEO agent, planner, engines, reviewers, lifecycle
-├── memory/                        14 memory types + retrieval, retention, versioning
-├── agents/                        AI agent registry (93 agents) + the standard agent spec
-│   ├── engineering/  product/  post-launch/  design/  research/  ai/  strategy/
-│   ├── security/  devops/  finance/  legal/  hr/  operations/  marketing/
-│   └── sales/  customer-success/  data/  documentation/  hardware/  investor-relations/
+├── ai/                        ◀── EVERYTHING THE AI RUNS ON ──────────────────
+│   ├── agents/                    93 agent specs, one folder per department
+│   │   └── engineering/ product/ post-launch/ design/ research/ ai-engineering/ …
+│   ├── orchestration/             the kernel: CEO agent, planner, engines, reviewers
+│   └── memory/                    14 memory types + retrieval, retention, versioning
 │
-├── engineering/ ┐                 ┌ 20 departments, each a full operating manual:
-├── product/     │                 │   README · mission · vision · principles · organization
-├── post-launch/ │                 │   roles · agents · workflows · playbooks · sops
-├── design/      │  each contains  │   decision-frameworks · standards · review-process
-├── research/    ├─ the standard ──┤   quality-gates · automation · metrics · dashboards · tools
-├── ai/          │  18 files +     │   + templates/  checklists/  examples/
-├── strategy/    │  3 subfolders   │
-├── security/    │                 └ (+ domain deep-dives, e.g. research/technology-readiness.md,
-├── devops/      │                     sales/methodology.md, strategy/pitching.md)
-├── finance/     │
-├── legal/       │   ... hr/  operations/  marketing/  sales/  customer-success/
-└── ...          ┘       data/  documentation/  hardware/  investor-relations/
+├── starter-kits/              ◀── PICK YOUR COMPANY TYPE ────────────────────
+│   └── ai-startup/ saas/ developer-tools/ enterprise-b2b/ marketplace/
+│       consumer-app/ robotics/ drone/ embedded/ iot/ research-lab/
 │
-├── workflows/                     cross-department processes (the 20-phase SDLC)
-├── standards/                     index of every company-wide standard
-├── playbooks/                     step-by-step guides (brainstorm, MVP, launch, hiring, fundraising…)
-├── templates/                     department-template/ + documents/ (PRD, RFC, ADR, OKR…)
-├── starter-kits/                  11 company types (ai-startup, saas, robotics, iot, research-lab…)
-│
-├── docs/                          guides: company-building-guide, onboarding-paths, okrs, roadmap
 ├── scripts/                       CI tooling: check-links.py, check-structure.py
 ├── .github/                       issue/PR templates, community health, CI workflows
 │
-├── README.md   STRUCTURE.md   GLOSSARY.md   CONTRIBUTING.md   CHANGELOG.md   LICENSE
+└── README.md  CUSTOMIZE.md  STRUCTURE.md  GLOSSARY.md
+    CONTRIBUTING.md  CHANGELOG.md  ROADMAP.md  LICENSE
 ```
 
 ---
 
 ## Contents
 
-- [Folder structure](#folder-structure)
-- [Start here](#start-here)
-- [Meta & conventions](#meta--conventions)
-- [The kernel](#the-kernel) — company · governance · orchestration · memory · agents
-- [Departments](#departments) — all 20
+- [How to customize](#how-to-customize) · [Folder structure](#folder-structure)
+- [Start here](#start-here) · [Meta & conventions](#meta--conventions)
+- [handbook/ — the reading side](#handbook--the-reading-side)
+- [ai/ — the machine side](#ai--the-machine-side)
 - [The founder journey](#the-founder-journey) — idea → validate → build → launch → sell → raise → scale
-- [Shared systems](#shared-systems) — workflows · standards
-- [Templates](#templates) · [Playbooks](#playbooks) · [Starter kits](#starter-kits) · [Guides & docs](#guides--docs)
-- [Automation](#automation) · [Design philosophy](#design-philosophy) · [Contributing](#contributing--extending) · [License](#license)
+- [Starter kits](#starter-kits) · [Automation](#automation)
+- [Design philosophy](#design-philosophy) · [Contributing](#contributing--extending) · [License](#license)
 
 ---
 
 ## Start here
 
-1. **First-time founder?** Read the **[Company-Building Guide](docs/company-building-guide.md)** — the skills to learn and the full steps to build and manage a company, each linked into the OS.
-2. **Adopting the OS?** Read the [company identity](company/README.md) → [governance](governance/README.md) → the [kernel](orchestration/README.md) + [memory](memory/README.md).
-3. **Building a specific kind of company?** Pick a [starter kit](#starter-kits).
-4. **Navigating or extending?** See [STRUCTURE.md](STRUCTURE.md) (the map) and [GLOSSARY.md](GLOSSARY.md) (the vocabulary).
+1. **First-time founder?** Read the **[Company-Building Guide](handbook/guides/company-building-guide.md)** — the skills to learn and the full steps to build and manage a company.
+2. **Making this your company?** Follow **[CUSTOMIZE.md](CUSTOMIZE.md)**.
+3. **Adopting the OS?** [company identity](handbook/company/README.md) → [governance](handbook/governance/README.md) → the [kernel](ai/orchestration/README.md) + [memory](ai/memory/README.md).
+4. **Building a specific kind of company?** Pick a [starter kit](#starter-kits).
 
-> Every directory has its own `README.md` that indexes its files. This page is the top-level index; follow any link to that area's index for the full detail.
-
----
+> Every directory has its own `README.md` that indexes it. This page is the top-level index; follow any link to that area's index for the full detail.
 
 ## Meta & conventions
 
 | File | Purpose |
 |---|---|
+| [CUSTOMIZE.md](CUSTOMIZE.md) | How to make this repo your own |
 | [STRUCTURE.md](STRUCTURE.md) | The repository map + naming & authoring conventions |
 | [GLOSSARY.md](GLOSSARY.md) | Shared vocabulary |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to add departments, agents, and docs |
-| [CHANGELOG.md](CHANGELOG.md) | What changed, by version |
-| [docs/ROADMAP.md](docs/ROADMAP.md) | What is built and where it goes next |
+| [CHANGELOG.md](CHANGELOG.md) · [ROADMAP.md](ROADMAP.md) | What changed · what's next |
 | [LICENSE](LICENSE) | MIT |
 
 ---
 
-## The kernel
+## handbook/ — the reading side
 
-The reusable core every department and agent plugs into.
+Full index: **[handbook/README.md](handbook/README.md)**
 
 | Area | What's inside |
 |---|---|
-| [company/](company/README.md) | Identity — [mission](company/mission.md) · [vision](company/vision.md) · [principles](company/principles.md) · [structure](company/structure.md) · [roles](company/roles.md) |
-| [governance/](governance/README.md) | [decision framework](governance/decision-framework.md) · [communication rules](governance/communication-rules.md) · [quality gates](governance/quality-gates.md) · [output format](governance/universal-output-format.md) · [failure handling](governance/failure-handling.md) · [definition of done](governance/definition-of-done.md) |
-| [orchestration/](orchestration/README.md) | [CEO agent](orchestration/ceo-agent.md) · [planner](orchestration/planner.md) · [task decomposer](orchestration/task-decomposer.md) · [coordinator](orchestration/coordinator.md) · [memory](orchestration/memory-manager.md)/[knowledge](orchestration/knowledge-manager.md) managers · [reviewer](orchestration/reviewer.md) · [QA](orchestration/qa-reviewer.md)/[security](orchestration/security-reviewer.md)/[docs](orchestration/documentation-reviewer.md) reviewers · [approval](orchestration/approval-engine.md)/[execution](orchestration/execution-engine.md)/[improvement](orchestration/continuous-improvement-engine.md) engines · [lifecycle](orchestration/execution-lifecycle.md) |
-| [memory/](memory/README.md) | 14 memory types (session → company, project, customer, research, decision, lessons-learned, prompt, knowledge-base…) + [context](memory/context-management.md) · [retrieval](memory/retrieval.md) · [retention & versioning](memory/retention-and-versioning.md) |
-| [agents/](agents/README.md) | The full [agent registry](agents/README.md) (93 agents by division) + the [standard agent spec](agents/agent-template.md) |
+| [company/](handbook/company/README.md) | [mission](handbook/company/mission.md) · [vision](handbook/company/vision.md) · [principles](handbook/company/principles.md) · [structure](handbook/company/structure.md) · [roles](handbook/company/roles.md) |
+| [governance/](handbook/governance/README.md) | [decision framework](handbook/governance/decision-framework.md) · [quality gates](handbook/governance/quality-gates.md) · [communication rules](handbook/governance/communication-rules.md) · [definition of done](handbook/governance/definition-of-done.md) · [failure handling](handbook/governance/failure-handling.md) |
+| [workflows/](handbook/workflows/README.md) | The 20-phase [SDLC](handbook/workflows/sdlc.md) |
+| [standards/](handbook/standards/README.md) | Index of every company-wide standard |
+| [templates/](handbook/templates/README.md) | [department template](handbook/templates/department-template/) · 17 [document templates](handbook/templates/documents/README.md): [PRD](handbook/templates/documents/prd.md) · [RFC](handbook/templates/documents/rfc.md) · [ADR](handbook/templates/documents/adr.md) · [incident report](handbook/templates/documents/incident-report.md) · [security review](handbook/templates/documents/security-review.md) · [release checklist](handbook/templates/documents/release-checklist.md) · [OKR](handbook/templates/documents/okr.md) · [one-pager](handbook/templates/documents/one-pager.md) · [offer letter](handbook/templates/documents/offer-letter.md) · [employment agreement](handbook/templates/documents/employment-agreement.md) · [board update](handbook/templates/documents/board-update.md) · [sales proposal](handbook/templates/documents/sales-proposal.md) · [QBR](handbook/templates/documents/qbr.md) · [DPA](handbook/templates/documents/dpa.md) |
+| [playbooks/](handbook/playbooks/README.md) | [brainstorming](handbook/playbooks/brainstorming-ideas.md) · [validating an idea](handbook/playbooks/validating-an-idea.md) · [building an MVP](handbook/playbooks/building-an-mvp.md) · [launching](handbook/playbooks/launching-a-product.md) · [running a sprint](handbook/playbooks/running-a-sprint.md) · [hiring an engineer](handbook/playbooks/hiring-an-engineer.md) · [pitching](handbook/playbooks/pitching-to-investors.md) · [fundraising](handbook/playbooks/fundraising.md) · [customer complaint](handbook/playbooks/handling-a-customer-complaint.md) · [scaling a team](handbook/playbooks/scaling-a-team.md) · [international expansion](handbook/playbooks/international-expansion.md) |
+| [guides/](handbook/guides/README.md) | [Company-Building Guide](handbook/guides/company-building-guide.md) · [onboarding paths](handbook/guides/onboarding-paths.md) · [OKRs](handbook/guides/okrs.md) · [worked example](handbook/guides/example-company.md) |
 
----
+### Departments (20)
 
-## Departments
-
-All 20 are fully built: the standard 18 files + `templates/`, `checklists/`, `examples/`, and their AI agents. Each folder's `README.md` is its own index.
+Full index: **[handbook/departments/README.md](handbook/departments/README.md)**
 
 | Department | What it owns |
 |---|---|
-| [engineering/](engineering/README.md) | Maintainable, tested, secure software; standards, review, delivery |
-| [product/](product/README.md) | The *right* product — discovery, PRDs, prioritization, roadmap, PMF |
-| [post-launch/](post-launch/README.md) | Reliability after ship — monitoring, incidents, maintenance, [tech debt](post-launch/technical-debt/), EOL |
-| [design/](design/README.md) | Usable, accessible experiences; the [design system](design/design-system.md) |
-| [research/](research/README.md) | What to build next — [ideation](research/ideation.md), [TRL](research/technology-readiness.md), [opportunity scoring](research/opportunity-scoring.md) |
-| [ai/](ai/README.md) | AI as engineering — [RAG](ai/README.md), [evaluation](ai/evaluation-and-testing.md), [prompt versioning](ai/prompt-engineering.md), [AI security](ai/ai-security.md) |
-| [strategy/](strategy/README.md) | Building the company — [lifecycle](strategy/startup-lifecycle.md), [market](strategy/market-analysis.md), [model](strategy/business-model.md), [unit economics](strategy/unit-economics.md), [GTM](strategy/go-to-market.md) |
-| [security/](security/README.md) | Threat modeling, pen testing, vulnerability mgmt, compliance, privacy |
-| [devops/](devops/README.md) | CI/CD, infrastructure-as-code, releases, reliability (DORA/SRE) |
-| [finance/](finance/README.md) | Forecasting, budgeting, accounting, billing, runway, cost |
-| [legal/](legal/README.md) | Contracts, IP, compliance, privacy & terms |
-| [hr/](hr/README.md) | Recruiting, onboarding, performance, culture |
-| [operations/](operations/README.md) | Cadences, project mgmt, process, vendor & knowledge mgmt |
-| [marketing/](marketing/README.md) | Positioning, content/SEO, brand, growth, launches, [psychology](marketing/psychology.md) |
-| [sales/](sales/README.md) | Selling — [method](sales/methodology.md), [psychology](sales/psychology.md), [channels](sales/channels.md), closing |
-| [customer-success/](customer-success/README.md) | Onboarding, health scoring, retention, expansion |
-| [data/](data/README.md) | Pipelines, the metrics layer, analytics, governance |
-| [documentation/](documentation/README.md) | Product & API docs, knowledge base, freshness |
-| [hardware/](hardware/README.md) | Firmware, electronics, mechanical, test — for physical products |
-| [investor-relations/](investor-relations/README.md) | Investor updates, board governance, cap table |
+| [engineering/](handbook/departments/engineering/README.md) | Maintainable, tested, secure software; standards, review, delivery |
+| [product/](handbook/departments/product/README.md) | The *right* product — discovery, PRDs, prioritization, roadmap, PMF |
+| [post-launch/](handbook/departments/post-launch/README.md) | Reliability after ship — monitoring, incidents, maintenance, [tech debt](handbook/departments/post-launch/technical-debt/), EOL |
+| [design/](handbook/departments/design/README.md) | Usable, accessible experiences; the [design system](handbook/departments/design/design-system.md) |
+| [research/](handbook/departments/research/README.md) | What to build next — [ideation](handbook/departments/research/ideation.md), [TRL](handbook/departments/research/technology-readiness.md), [opportunity scoring](handbook/departments/research/opportunity-scoring.md) |
+| [ai-engineering/](handbook/departments/ai-engineering/README.md) | Building AI products — RAG, [evaluation](handbook/departments/ai-engineering/evaluation-and-testing.md), [prompt standards](handbook/departments/ai-engineering/prompt-engineering.md), [AI security](handbook/departments/ai-engineering/ai-security.md) |
+| [strategy/](handbook/departments/strategy/README.md) | Building the company — [lifecycle](handbook/departments/strategy/startup-lifecycle.md), [market](handbook/departments/strategy/market-analysis.md), [business model](handbook/departments/strategy/business-model.md), [unit economics](handbook/departments/strategy/unit-economics.md) |
+| [security/](handbook/departments/security/README.md) | Threat modeling, pen testing, vulnerability mgmt, compliance, privacy |
+| [devops/](handbook/departments/devops/README.md) | CI/CD, infrastructure-as-code, releases, reliability (DORA/SRE) |
+| [finance/](handbook/departments/finance/README.md) | Forecasting, budgeting, accounting, billing, runway, cost |
+| [legal/](handbook/departments/legal/README.md) | Contracts, IP, compliance, privacy & terms |
+| [hr/](handbook/departments/hr/README.md) | Recruiting, onboarding, performance, culture |
+| [operations/](handbook/departments/operations/README.md) | Cadences, project mgmt, process, vendor & knowledge mgmt |
+| [marketing/](handbook/departments/marketing/README.md) | Positioning, content/SEO, brand, growth, [psychology](handbook/departments/marketing/psychology.md) |
+| [sales/](handbook/departments/sales/README.md) | Selling — [method](handbook/departments/sales/methodology.md), [psychology](handbook/departments/sales/psychology.md), [channels](handbook/departments/sales/channels.md) |
+| [customer-success/](handbook/departments/customer-success/README.md) | Onboarding, health scoring, retention, expansion |
+| [data/](handbook/departments/data/README.md) | Pipelines, the metrics layer, analytics, governance |
+| [documentation/](handbook/departments/documentation/README.md) | Product & API docs, knowledge base, freshness |
+| [hardware/](handbook/departments/hardware/README.md) | Firmware, electronics, mechanical, test — for physical products |
+| [investor-relations/](handbook/departments/investor-relations/README.md) | Investor updates, board governance, cap table |
+
+---
+
+## ai/ — the machine side
+
+Full index: **[ai/README.md](ai/README.md)**
+
+| Area | What's inside |
+|---|---|
+| [agents/](ai/agents/README.md) | The registry of **93 agent specs** (one folder per department) + the [standard 11-section spec](ai/agents/agent-template.md) |
+| [orchestration/](ai/orchestration/README.md) | [CEO agent](ai/orchestration/ceo-agent.md) · [planner](ai/orchestration/planner.md) · [task decomposer](ai/orchestration/task-decomposer.md) · [coordinator](ai/orchestration/coordinator.md) · [reviewer](ai/orchestration/reviewer.md) · [QA](ai/orchestration/qa-reviewer.md)/[security](ai/orchestration/security-reviewer.md)/[docs](ai/orchestration/documentation-reviewer.md) reviewers · [approval](ai/orchestration/approval-engine.md)/[execution](ai/orchestration/execution-engine.md)/[improvement](ai/orchestration/continuous-improvement-engine.md) engines · [lifecycle](ai/orchestration/execution-lifecycle.md) |
+| [memory/](ai/memory/README.md) | 14 memory types (session → company, project, customer, decision, [lessons-learned](ai/memory/lessons-learned.md), [prompt](ai/memory/prompt-memory.md), [knowledge base](ai/memory/knowledge-base.md)…) + [context](ai/memory/context-management.md) · [retrieval](ai/memory/retrieval.md) · [retention & versioning](ai/memory/retention-and-versioning.md) |
+
+> Don't confuse `ai/` (the AI **workforce**) with [handbook/departments/ai-engineering/](handbook/departments/ai-engineering/README.md) (the **discipline** of building AI products).
 
 ---
 
 ## The founder journey
 
-The end-to-end path a company travels, with the exact docs for each phase. The [Company-Building Guide](docs/company-building-guide.md) narrates the whole arc; this is the quick index.
+The end-to-end path a company travels, with the exact doc for each phase. The [Company-Building Guide](handbook/guides/company-building-guide.md) narrates the whole arc.
 
 | Phase | Go to |
 |---|---|
-| **0 · Brainstorm** | [research/ideation.md](research/ideation.md) · [playbook](playbooks/brainstorming-ideas.md) |
-| **1 · Validate the idea** | [strategy/idea-validation.md](strategy/idea-validation.md) · [product discovery](product/discovery.md) · [playbook](playbooks/validating-an-idea.md) |
-| **2 · Assess & rank** | [technology readiness (TRL)](research/technology-readiness.md) · [opportunity scoring](research/opportunity-scoring.md) · [market analysis](strategy/market-analysis.md) |
-| **3 · Business model** | [business model & pricing](strategy/business-model.md) · [unit economics](strategy/unit-economics.md) |
-| **4 · Build** | [SDLC](workflows/sdlc.md) · [MVP playbook](playbooks/building-an-mvp.md) · [engineering](engineering/README.md) · [design](design/README.md) |
-| **5 · Launch** | [launch playbook](playbooks/launching-a-product.md) · [release management](post-launch/release-management.md) |
-| **6 · Sell** | [how to sell](sales/methodology.md) · [buyer psychology](sales/psychology.md) · [where to sell](sales/channels.md) · [GTM](strategy/go-to-market.md) |
-| **7 · Raise** | [pitching](strategy/pitching.md) · [finding investors](strategy/finding-investors.md) · [fundraising playbook](playbooks/fundraising.md) |
-| **8 · Operate & scale** | [operating rhythm](docs/company-building-guide.md) · [OKRs](docs/okrs.md) · [continuous improvement](post-launch/continuous-improvement.md) |
-
----
-
-## Shared systems
-
-| Area | What's inside |
-|---|---|
-| [workflows/](workflows/README.md) | Cross-department processes, incl. the 20-phase [SDLC](workflows/sdlc.md) |
-| [standards/](standards/README.md) | Index of every company-wide standard (coding, testing, security, API, DB, product, docs…) |
-
----
-
-## Templates
-
-Copy-and-fill scaffolds — see [templates/](templates/README.md).
-
-- **[department-template/](templates/department-template/)** — the canonical 21-file department skeleton.
-- **[agent-template.md](agents/agent-template.md)** — the 11-section agent spec.
-- **[documents/](templates/documents/README.md):** [PRD](templates/documents/prd.md) · [RFC](templates/documents/rfc.md) · [ADR](templates/documents/adr.md) · [incident report](templates/documents/incident-report.md) · [research report](templates/documents/research-report.md) · [security review](templates/documents/security-review.md) · [release checklist](templates/documents/release-checklist.md) · [meeting notes](templates/documents/meeting-notes.md) · [status report](templates/documents/status-report.md) · [OKR](templates/documents/okr.md) · [one-pager](templates/documents/one-pager.md) · [offer letter](templates/documents/offer-letter.md) · [board update](templates/documents/board-update.md)
-
----
-
-## Playbooks
-
-Step-by-step guides for recurring situations — see [playbooks/](playbooks/README.md).
-
-[brainstorming ideas](playbooks/brainstorming-ideas.md) · [validating an idea](playbooks/validating-an-idea.md) · [building an MVP](playbooks/building-an-mvp.md) · [launching a product](playbooks/launching-a-product.md) · [running a sprint](playbooks/running-a-sprint.md) · [hiring an engineer](playbooks/hiring-an-engineer.md) · [pitching to investors](playbooks/pitching-to-investors.md) · [fundraising](playbooks/fundraising.md)
-
-Incident & reliability playbooks live in [post-launch/playbooks/](post-launch/playbooks/) (outage, security breach, rollback, and 9 more).
+| **0 · Brainstorm** | [ideation](handbook/departments/research/ideation.md) · [playbook](handbook/playbooks/brainstorming-ideas.md) |
+| **1 · Validate the idea** | [idea validation](handbook/departments/strategy/idea-validation.md) · [product discovery](handbook/departments/product/discovery.md) · [playbook](handbook/playbooks/validating-an-idea.md) |
+| **2 · Assess & rank** | [technology readiness (TRL)](handbook/departments/research/technology-readiness.md) · [opportunity scoring](handbook/departments/research/opportunity-scoring.md) · [market analysis](handbook/departments/strategy/market-analysis.md) |
+| **3 · Business model** | [business model & pricing](handbook/departments/strategy/business-model.md) · [unit economics](handbook/departments/strategy/unit-economics.md) |
+| **4 · Build** | [SDLC](handbook/workflows/sdlc.md) · [MVP playbook](handbook/playbooks/building-an-mvp.md) · [engineering](handbook/departments/engineering/README.md) · [design](handbook/departments/design/README.md) |
+| **5 · Launch** | [launch playbook](handbook/playbooks/launching-a-product.md) · [release management](handbook/departments/post-launch/release-management.md) |
+| **6 · Sell** | [how to sell](handbook/departments/sales/methodology.md) · [buyer psychology](handbook/departments/sales/psychology.md) · [where to sell](handbook/departments/sales/channels.md) · [GTM](handbook/departments/strategy/go-to-market.md) |
+| **7 · Raise** | [pitching](handbook/departments/strategy/pitching.md) · [finding investors](handbook/departments/strategy/finding-investors.md) · [fundraising playbook](handbook/playbooks/fundraising.md) |
+| **8 · Operate & scale** | [operating rhythm](handbook/guides/company-building-guide.md) · [OKRs](handbook/guides/okrs.md) · [continuous improvement](handbook/departments/post-launch/continuous-improvement.md) |
 
 ---
 
@@ -192,46 +237,36 @@ Incident & reliability playbooks live in [post-launch/playbooks/](post-launch/pl
 
 Preconfigured company types that inherit core Company OS and add domain deltas — see [starter-kits/](starter-kits/README.md).
 
-[ai-startup](starter-kits/ai-startup/) · [saas](starter-kits/saas/) · [developer-tools](starter-kits/developer-tools/) · [enterprise-b2b](starter-kits/enterprise-b2b/) · [marketplace](starter-kits/marketplace/) · [consumer-app](starter-kits/consumer-app/) · [robotics](starter-kits/robotics/) · [drone](starter-kits/drone/) · [embedded](starter-kits/embedded/) · [iot](starter-kits/iot/) · [research-lab](starter-kits/research-lab/)
-
----
-
-## Guides & docs
-
-Cross-cutting guides — see [docs/](docs/README.md).
-
-| Doc | Purpose |
-|---|---|
-| [company-building-guide.md](docs/company-building-guide.md) | Skills to learn + steps to build and manage a company |
-| [onboarding-paths.md](docs/onboarding-paths.md) | Day 1 → day 30 ramp for every role (human or agent) |
-| [okrs.md](docs/okrs.md) | How goals & OKRs tie department metrics to the mission |
-| [example-company.md](docs/example-company.md) | One fictional company taken through every step |
-| [ROADMAP.md](docs/ROADMAP.md) | What's built and where it goes next |
-
----
+[ai-startup](starter-kits/ai-startup/) · [saas](starter-kits/saas/) · [developer-tools](starter-kits/developer-tools/) · [enterprise-b2b](starter-kits/enterprise-b2b/) · [marketplace](starter-kits/marketplace/) · [consumer-app](starter-kits/consumer-app/) · [robotics](starter-kits/robotics/) · [drone](starter-kits/drone/) · [embedded](starter-kits/embedded/) · [iot](starter-kits/iot/) · [research-lab](starter-kits/research-lab/) · [fintech](starter-kits/fintech/) · [healthtech](starter-kits/healthtech/) · [climate-tech](starter-kits/climate-tech/) · [gaming](starter-kits/gaming/) · [edtech](starter-kits/edtech/)
 
 ## Automation
 
-| Area | Purpose |
+| Script | Purpose |
 |---|---|
-| [.github/](.github/) | Issue/PR templates, code of conduct, security, support, funding, and CI workflows |
-| [scripts/](scripts/) | Repo tooling — [check-links.py](scripts/check-links.py) (link integrity) and [check-structure.py](scripts/check-structure.py) (structure conformance), run in CI |
+| [scripts/scaffold.py](scripts/scaffold.py) | Scaffold a new department or agent from the templates |
+| [scripts/check-links.py](scripts/check-links.py) | Every internal link resolves |
+| [scripts/check-structure.py](scripts/check-structure.py) | Departments and agent specs conform |
+| [scripts/check-conventions.py](scripts/check-conventions.py) | Every folder self-indexes; no placeholder text |
+
+The three checkers run in CI on every push and PR ([.github/](.github/), which also holds issue/PR
+templates, code of conduct, security policy, support, funding, and a stale-issue bot).
 
 ---
 
 ## Design philosophy
 
+- **Two clean sides** — [handbook/](handbook/README.md) for humans, [ai/](ai/README.md) for the agent workforce. Customization is obvious because the boundary is obvious.
 - **Modular & industry-agnostic** — supports SaaS, AI, robotics, embedded, IoT, hardware, drones, healthcare, fintech, climate tech, research labs, developer tools, consumer, and enterprise.
-- **Same structure everywhere** — every department uses the [standard structure](STRUCTURE.md#standard-department-structure); every agent uses the [standard spec](agents/agent-template.md). Predictability makes the system extensible.
-- **Evidence over assumptions · first principles · long-term value** — see [company/principles.md](company/principles.md).
+- **Same structure everywhere** — every department uses the [standard structure](STRUCTURE.md#standard-department-structure); every agent uses the [standard spec](ai/agents/agent-template.md). Predictability makes the system extensible.
+- **Evidence over assumptions · first principles · long-term value** — see [handbook/company/principles.md](handbook/company/principles.md).
 - **Production-ready, never placeholder** — every document is written to actually be used.
 
 ---
 
 ## Contributing & extending
 
-Company OS is built incrementally. To add a department, copy [templates/department-template/](templates/department-template/)
-and fill it in. To add an agent, copy [agents/agent-template.md](agents/agent-template.md). Run
+To add a department, copy [handbook/templates/department-template/](handbook/templates/department-template/)
+and fill it in. To add an agent, copy [ai/agents/agent-template.md](ai/agents/agent-template.md). Run
 `python scripts/check-links.py` and `python scripts/check-structure.py` before opening a PR. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for the full conventions.
 

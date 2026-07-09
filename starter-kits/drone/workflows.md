@@ -1,6 +1,6 @@
 # Drone / UAV - Added Workflow
 
-Layered on top of the core [SDLC](../../workflows/sdlc.md), this domain adds:
+Layered on top of the core [SDLC](../../handbook/workflows/sdlc.md), this domain adds:
 
 ```
 Requirements + regulatory scope -> airframe/avionics + firmware
@@ -11,7 +11,7 @@ Requirements + regulatory scope -> airframe/avionics + firmware
 
 ## How it maps to core
 
-- Airframe/avionics use [hardware](../../hardware/README.md).
-- Autonomy uses [ai](../../ai/README.md) with staged flight testing.
-- Regulatory/airspace uses [legal compliance](../../legal/README.md).
-- Operations and incidents use [post-launch](../../post-launch/README.md).
+- Airframe/avionics use [hardware](../../handbook/departments/hardware/README.md).
+- Autonomy uses [ai](../../handbook/departments/ai-engineering/README.md) with staged flight testing.
+- Regulatory/airspace uses [legal compliance](../../handbook/departments/legal/README.md).
+- Operations and incidents use [post-launch](../../handbook/departments/post-launch/README.md).

@@ -4,9 +4,9 @@ A high-scale consumer product (mobile or web) that wins on engagement, retention
 
 ## What it inherits (unchanged)
 
-- The full [company identity](../../company/), [governance](../../governance/), and [kernel](../../orchestration/) ([memory](../../memory/), [agents](../../agents/)).
-- The [engineering](../../engineering/), [product](../../product/), and [post-launch](../../post-launch/) departments and every other core department.
-- The [SDLC](../../workflows/sdlc.md), [standards](../../standards/), [templates](../../templates/), and [strategy](../../strategy/).
+- The full [company identity](../../handbook/company/), [governance](../../handbook/governance/), and [kernel](../../ai/orchestration/) ([memory](../../ai/memory/), [agents](../../ai/agents/)).
+- The [engineering](../../handbook/departments/engineering/), [product](../../handbook/departments/product/), and [post-launch](../../handbook/departments/post-launch/) departments and every other core department.
+- The [SDLC](../../handbook/workflows/sdlc.md), [standards](../../handbook/standards/), [templates](../../handbook/templates/), and [strategy](../../handbook/departments/strategy/).
 
 ## What it adds / emphasizes
 

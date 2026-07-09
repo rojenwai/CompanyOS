@@ -1,6 +1,6 @@
 # Consumer App - Added Workflow
 
-Layered on top of the core [SDLC](../../workflows/sdlc.md), this domain adds:
+Layered on top of the core [SDLC](../../handbook/workflows/sdlc.md), this domain adds:
 
 ```
 Acquisition (loop/paid) -> onboarding to aha moment
@@ -11,7 +11,7 @@ Acquisition (loop/paid) -> onboarding to aha moment
 
 ## How it maps to core
 
-- Onboarding and delight use [design](../../design/README.md).
-- Growth loops use [marketing growth](../../agents/marketing/growth-marketing-agent.md).
-- Cohorts and experiments use [data](../../data/README.md) and [product analytics](../../product/analytics.md).
-- Mobile quality uses [engineering](../../engineering/README.md).
+- Onboarding and delight use [design](../../handbook/departments/design/README.md).
+- Growth loops use [marketing growth](../../ai/agents/marketing/growth-marketing-agent.md).
+- Cohorts and experiments use [data](../../handbook/departments/data/README.md) and [product analytics](../../handbook/departments/product/analytics.md).
+- Mobile quality uses [engineering](../../handbook/departments/engineering/README.md).

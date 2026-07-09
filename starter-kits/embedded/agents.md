@@ -1,15 +1,15 @@
 # Embedded Systems - Added / Activated
 
-Beyond the core [agents](../../agents/README.md), this kit leans on these departments and agents.
-Write any new agents from the [agent template](../../agents/agent-template.md).
+Beyond the core [agents](../../ai/agents/README.md), this kit leans on these departments and agents.
+Write any new agents from the [agent template](../../ai/agents/agent-template.md).
 
 ## Departments to activate first
 
-- [hardware/](../../hardware/README.md) - firmware and electronics
-- [engineering/](../../engineering/README.md) - device/cloud software interfaces
-- [security/](../../security/README.md) - device security, secure boot, OTA integrity
-- [post-launch/](../../post-launch/README.md) - field reliability and updates
+- [hardware/](../../handbook/departments/hardware/README.md) - firmware and electronics
+- [engineering/](../../handbook/departments/engineering/README.md) - device/cloud software interfaces
+- [security/](../../handbook/departments/security/README.md) - device security, secure boot, OTA integrity
+- [post-launch/](../../handbook/departments/post-launch/README.md) - field reliability and updates
 
 ## Emphasis
 
-Emphasize the [Firmware Engineer Agent](../../agents/hardware/firmware-engineer-agent.md), [Electrical Engineer Agent](../../agents/hardware/electrical-engineer-agent.md), and [Hardware Test Agent](../../agents/hardware/hardware-test-agent.md).
+Emphasize the [Firmware Engineer Agent](../../ai/agents/hardware/firmware-engineer-agent.md), [Electrical Engineer Agent](../../ai/agents/hardware/electrical-engineer-agent.md), and [Hardware Test Agent](../../ai/agents/hardware/hardware-test-agent.md).

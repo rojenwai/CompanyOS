@@ -5,9 +5,9 @@ all of Company OS and adds what an AI-native product company specifically needs.
 
 ## What it inherits (unchanged)
 
-- The full [company identity](../../company/), [governance](../../governance/), and [kernel](../../orchestration/) ([memory](../../memory/), [agents](../../agents/)).
-- The [engineering](../../engineering/), [product](../../product/), and [post-launch](../../post-launch/) departments.
-- The [SDLC](../../workflows/sdlc.md), [standards](../../standards/), [templates](../../templates/), and [strategy](../../strategy/).
+- The full [company identity](../../handbook/company/), [governance](../../handbook/governance/), and [kernel](../../ai/orchestration/) ([memory](../../ai/memory/), [agents](../../ai/agents/)).
+- The [engineering](../../handbook/departments/engineering/), [product](../../handbook/departments/product/), and [post-launch](../../handbook/departments/post-launch/) departments.
+- The [SDLC](../../handbook/workflows/sdlc.md), [standards](../../handbook/standards/), [templates](../../handbook/templates/), and [strategy](../../handbook/departments/strategy/).
 
 ## What it adds / emphasizes
 
@@ -21,7 +21,7 @@ all of Company OS and adds what an AI-native product company specifically needs.
 ## Why these deltas
 
 An AI startup lives or dies on **evaluation, cost, and model reliability**. Core Company OS already
-treats [AI as an engineering discipline](../../ai/README.md); this kit makes evaluation gates,
+treats [AI as an engineering discipline](../../handbook/departments/ai-engineering/README.md); this kit makes evaluation gates,
 prompt/model versioning, drift monitoring, and per-request cost first-class in the day-to-day workflow.
 
 ## Swapping this kit

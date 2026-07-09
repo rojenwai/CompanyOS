@@ -14,11 +14,14 @@ STANDARD = [
     "review-process.md", "quality-gates.md", "automation.md", "metrics.md", "dashboards.md", "tools.md",
 ]
 SUBFOLDERS = ["templates", "checklists", "examples"]
-FULL_DEPARTMENTS = [
-    "engineering", "product", "post-launch", "design", "research", "ai", "strategy", "security",
-    "devops", "finance", "legal", "hr", "operations", "marketing", "sales", "customer-success",
-    "data", "documentation", "hardware", "investor-relations",
+DEPARTMENTS_ROOT = os.path.join("handbook", "departments")
+AGENTS_ROOT = os.path.join("ai", "agents")
+DEPARTMENT_NAMES = [
+    "engineering", "product", "post-launch", "design", "research", "ai-engineering", "strategy",
+    "security", "devops", "finance", "legal", "hr", "operations", "marketing", "sales",
+    "customer-success", "data", "documentation", "hardware", "investor-relations",
 ]
+FULL_DEPARTMENTS = [os.path.join(DEPARTMENTS_ROOT, name) for name in DEPARTMENT_NAMES]
 SECTION_RE = re.compile(r"^##\s*\d+\.", re.M)
 
 
@@ -37,7 +40,7 @@ def main() -> int:
                 problems.append(f"{dept}/: missing subfolder {sub}/")
 
     agents = 0
-    for dp, _, fns in os.walk("agents"):
+    for dp, _, fns in os.walk(AGENTS_ROOT):
         for fn in fns:
             if fn.endswith(".md") and fn not in ("README.md", "agent-template.md"):
                 agents += 1

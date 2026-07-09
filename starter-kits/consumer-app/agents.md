@@ -1,15 +1,15 @@
 # Consumer App - Added / Activated
 
-Beyond the core [agents](../../agents/README.md), this kit leans on these departments and agents.
-Write any new agents from the [agent template](../../agents/agent-template.md).
+Beyond the core [agents](../../ai/agents/README.md), this kit leans on these departments and agents.
+Write any new agents from the [agent template](../../ai/agents/agent-template.md).
 
 ## Departments to activate first
 
-- [design/](../../design/README.md) - delight, onboarding, and habit formation
-- [marketing/](../../marketing/README.md) - growth loops, virality, performance marketing
-- [data/](../../data/README.md) - engagement, retention cohorts, experimentation
-- [engineering/](../../agents/engineering/mobile-engineer.md) - mobile performance and reliability
+- [design/](../../handbook/departments/design/README.md) - delight, onboarding, and habit formation
+- [marketing/](../../handbook/departments/marketing/README.md) - growth loops, virality, performance marketing
+- [data/](../../handbook/departments/data/README.md) - engagement, retention cohorts, experimentation
+- [engineering/](../../ai/agents/engineering/mobile-engineer.md) - mobile performance and reliability
 
 ## Emphasis
 
-Emphasize the [Growth Marketing Agent](../../agents/marketing/growth-marketing-agent.md), [Data Scientist Agent](../../agents/data/data-scientist-agent.md), and [Mobile Engineer](../../agents/engineering/mobile-engineer.md).
+Emphasize the [Growth Marketing Agent](../../ai/agents/marketing/growth-marketing-agent.md), [Data Scientist Agent](../../ai/agents/data/data-scientist-agent.md), and [Mobile Engineer](../../ai/agents/engineering/mobile-engineer.md).

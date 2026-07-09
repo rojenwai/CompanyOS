@@ -4,13 +4,13 @@ Thanks for using Company OS. Here's how to get help.
 
 ## Start here
 
-- **New?** Read the [Company OS hub](../README.md) and the [Company-Building Guide](../docs/company-building-guide.md).
+- **New?** Read the [Company OS hub](../README.md) and the [Company-Building Guide](../handbook/guides/company-building-guide.md).
 - **Looking for something?** Check [STRUCTURE.md](../STRUCTURE.md) (the map) and [GLOSSARY.md](../GLOSSARY.md).
-- **Wondering what's planned?** See the [ROADMAP](../docs/ROADMAP.md).
+- **Wondering what's planned?** See the [ROADMAP](../ROADMAP.md).
 
 ## Ask a question
 
-- Open a **[GitHub Discussion](https://github.com/rojenwai/AI-Company-Repo/discussions)** for questions and ideas.
+- Open a **[GitHub Discussion](https://github.com/rojenwai/CompanyOS/discussions)** for questions and ideas.
 
 ## Report a problem or propose an addition
 

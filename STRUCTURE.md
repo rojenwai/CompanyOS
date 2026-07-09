@@ -8,38 +8,48 @@ any part of the repository.
 
 ## Top-level layout
 
+The repository is split into **two sides**: what humans read (`handbook/`) and what the AI workforce
+runs on (`ai/`). This boundary is what makes the system easy to customize — see [CUSTOMIZE.md](CUSTOMIZE.md).
+
 ```
 company-os (repository root)
 │
-├── company/              Identity: mission, vision, principles, structure, roles
-├── governance/           Decision rights, quality gates, communication, definition of done
+├── handbook/            ◀── THE READING SIDE (humans)
+│   ├── company/             Identity: mission, vision, principles, structure, roles
+│   ├── governance/          Decision rights, quality gates, communication, definition of done
+│   ├── departments/         20 departments, all full (18 files + templates/ checklists/ examples/):
+│   │                          engineering  product  post-launch  design  research
+│   │                          ai-engineering  strategy  security  devops  finance
+│   │                          legal  hr  operations  marketing  sales
+│   │                          customer-success  data  documentation  hardware  investor-relations
+│   ├── workflows/           Cross-department processes (e.g. the SDLC)
+│   ├── standards/           Company-wide standards
+│   ├── playbooks/           Operational playbooks
+│   ├── templates/           Reusable department + document templates
+│   └── guides/              Company-Building Guide, onboarding paths, OKRs, worked example
 │
-├── orchestration/        The kernel: CEO agent, planner, engines, execution lifecycle
-├── memory/               Memory architecture: types, retrieval, retention, versioning
-├── agents/               AI agent registry + the standard agent specification
+├── ai/                  ◀── THE MACHINE SIDE (the agent workforce)
+│   ├── agents/              AI agent registry (93 specs) + the standard agent specification
+│   ├── orchestration/       The kernel: CEO agent, planner, engines, execution lifecycle
+│   └── memory/              Memory architecture: types, retrieval, retention, versioning
 │
-│                         20 departments, all full (18 files + templates/ checklists/ examples/):
-├── engineering/  product/  post-launch/  design/  research/  ai/  strategy/
-├── security/  devops/  finance/  legal/  hr/  operations/  marketing/
-├── sales/  customer-success/  data/  documentation/  hardware/  investor-relations/
+├── starter-kits/        Preconfigured company types that inherit core Company OS
+├── scripts/             Repo tooling (link + structure checkers, run in CI)
+├── .github/             Community health files + CI workflows
 │
-├── workflows/            Cross-department processes (e.g. the SDLC)
-├── standards/            Company-wide standards
-├── playbooks/            Operational playbooks
-├── templates/            Reusable department + document templates
-├── starter-kits/         Preconfigured company types that inherit core Company OS
-│
-├── docs/                 Cross-cutting guides (Company-Building Guide, ROADMAP)
-├── scripts/              Repo tooling (e.g. link checker)
-├── .github/              Community health files + CI workflows
-│
-├── README.md             The Company OS hub
-├── STRUCTURE.md          This file
-├── CONTRIBUTING.md       Authoring conventions
-└── GLOSSARY.md           Shared vocabulary
+├── README.md            The Company OS hub
+├── CUSTOMIZE.md         How to make this repo your own
+├── STRUCTURE.md         This file
+├── CONTRIBUTING.md      Authoring conventions
+├── GLOSSARY.md          Shared vocabulary
+├── CHANGELOG.md         What changed, by version
+└── ROADMAP.md           What's built and what's next
 ```
 
 The repository root **is** Company OS — there is no redundant `company-os/` nesting.
+
+**Naming note:** `ai/` is the AI *workforce* (agents, orchestration, memory). The *discipline* of
+building AI products is a department: `handbook/departments/ai-engineering/`.
 
 ---
 
@@ -49,14 +59,14 @@ Every department is a miniature operating manual. It uses **exactly** this shape
 engineering, finance, research, and legal all feel the same:
 
 ```
-<department>/
+handbook/departments/<department>/
 ├── README.md              Overview + index of the department
 ├── mission.md             Why this department exists
 ├── vision.md              Where it is going
 ├── principles.md          Non-negotiable operating principles
 ├── organization.md        Structure, reporting lines, interfaces
 ├── roles.md               Human + AI roles and their accountabilities
-├── agents.md              Which AI agents operate here (links to agents/<dept>/)
+├── agents.md              Which AI agents operate here (links to ai/agents/<dept>/)
 ├── workflows.md           Core repeatable processes
 ├── playbooks.md           Situational step-by-step guides
 ├── sops.md                Standard operating procedures
@@ -73,15 +83,15 @@ engineering, finance, research, and legal all feel the same:
 └── examples/              Worked examples
 ```
 
-A **"seeded"** department has a real `README.md` plus the natural content files carrying its
-migrated content; it is upgraded to the full structure in a later slice. A **"full"** department
-has the complete set above.
+All 20 departments are **full** — they have the complete set above. Some also carry *domain deep-dives*
+(extra files unique to that department, e.g. `research/technology-readiness.md`, `sales/methodology.md`),
+which are indexed from the department's `README.md`.
 
 ---
 
 ## Standard agent specification
 
-Every AI agent is defined in a single file under `agents/<division>/<agent-name>.md` and contains
+Every AI agent is defined in a single file under `ai/agents/<department>/<agent-name>.md` and contains
 these 11 sections, in order:
 
 1. **Mission** — the one-sentence reason the agent exists
@@ -96,7 +106,7 @@ these 11 sections, in order:
 10. **KPIs** — how its performance is measured
 11. **Review requirements** — who reviews its output before it is accepted
 
-The empty scaffold lives at [agents/agent-template.md](agents/agent-template.md).
+The empty scaffold lives at [agents/agent-template.md](ai/agents/agent-template.md).
 
 ---
 

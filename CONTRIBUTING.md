@@ -17,16 +17,16 @@ or extend content so the system stays consistent.
 
 ## Adding a new department
 
-1. Copy [`templates/department-template/`](templates/department-template/) to `<department>/`.
+1. Copy [`templates/department-template/`](handbook/templates/department-template/) to `<department>/`.
 2. Fill in every file. Start with `README.md`, `mission.md`, `principles.md`, then the operational files.
-3. Create the department's agents under `agents/<department>/` from [`agents/agent-template.md`](agents/agent-template.md), and index them in `<department>/agents.md`.
+3. Create the department's agents under `agents/<department>/` from [`agents/agent-template.md`](ai/agents/agent-template.md), and index them in `<department>/agents.md`.
 4. Add the department to the repository map in the root [README.md](README.md) and to [STRUCTURE.md](STRUCTURE.md).
 
 ## Adding a new agent
 
-1. Copy [`agents/agent-template.md`](agents/agent-template.md) to `agents/<division>/<agent-name>.md`.
+1. Copy [`agents/agent-template.md`](ai/agents/agent-template.md) to `agents/<division>/<agent-name>.md`.
 2. Complete all **11 sections** — an agent spec is incomplete if any section is missing.
-3. Register it in [`agents/README.md`](agents/README.md) and the owning department's `agents.md`.
+3. Register it in [`agents/README.md`](ai/agents/README.md) and the owning department's `agents.md`.
 
 ## Adding a starter kit
 

@@ -1,6 +1,6 @@
 # Developer Tools - Added Workflow
 
-Layered on top of the core [SDLC](../../workflows/sdlc.md), this domain adds:
+Layered on top of the core [SDLC](../../handbook/workflows/sdlc.md), this domain adds:
 
 ```
 API design (contract-first) -> reference docs from spec
@@ -11,7 +11,7 @@ API design (contract-first) -> reference docs from spec
 
 ## How it maps to core
 
-- API design uses [engineering API standards](../../engineering/api-standards.md).
-- Docs use [documentation](../../documentation/README.md), generated from the spec.
-- Compatibility uses the [API Compatibility Agent](../../agents/post-launch/api-compatibility-agent.md).
-- DevRel content uses [marketing content](../../marketing/README.md).
+- API design uses [engineering API standards](../../handbook/departments/engineering/api-standards.md).
+- Docs use [documentation](../../handbook/departments/documentation/README.md), generated from the spec.
+- Compatibility uses the [API Compatibility Agent](../../ai/agents/post-launch/api-compatibility-agent.md).
+- DevRel content uses [marketing content](../../handbook/departments/marketing/README.md).

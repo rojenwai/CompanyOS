@@ -1,6 +1,6 @@
 # AI Startup — Added Workflow: the AI delivery lifecycle
 
-Layered on top of the core [SDLC](../../workflows/sdlc.md), AI features add a data-and-evaluation loop.
+Layered on top of the core [SDLC](../../handbook/workflows/sdlc.md), AI features add a data-and-evaluation loop.
 
 ```
 Problem + data availability
@@ -22,8 +22,8 @@ Degradation? → AI model degradation playbook → back to Build
 
 ## How it maps to core
 
-- The **eval gate** is an AI-specific [quality gate](../../governance/quality-gates.md).
-- **Ship** uses the core [release management](../../post-launch/release-management.md) and [rollback](../../post-launch/rollback.md).
-- **Monitor drift** uses core [observability](../../post-launch/observability.md) plus the
-  [AI model degradation playbook](../../post-launch/playbooks/ai-model-degradation.md).
-- Learnings feed the core [continuous improvement loop](../../post-launch/continuous-improvement.md).
+- The **eval gate** is an AI-specific [quality gate](../../handbook/governance/quality-gates.md).
+- **Ship** uses the core [release management](../../handbook/departments/post-launch/release-management.md) and [rollback](../../handbook/departments/post-launch/rollback.md).
+- **Monitor drift** uses core [observability](../../handbook/departments/post-launch/observability.md) plus the
+  [AI model degradation playbook](../../handbook/departments/post-launch/playbooks/ai-model-degradation.md).
+- Learnings feed the core [continuous improvement loop](../../handbook/departments/post-launch/continuous-improvement.md).

@@ -1,9 +1,9 @@
 # AI Startup — Added Agents
 
-In addition to the core [engineering](../../agents/engineering/), [product](../../agents/product/), and
-[post-launch](../../agents/post-launch/) agents, an AI startup activates the **AI Division** agents.
-Write each from the [agent template](../../agents/agent-template.md); they follow the
-[AI engineering standards](../../ai/README.md).
+In addition to the core [engineering](../../ai/agents/engineering/), [product](../../ai/agents/product/), and
+[post-launch](../../ai/agents/post-launch/) agents, an AI startup activates the **AI Division** agents.
+Write each from the [agent template](../../ai/agents/agent-template.md); they follow the
+[AI engineering standards](../../handbook/departments/ai-engineering/README.md).
 
 | Agent | Mission (one line) |
 |---|---|
@@ -18,7 +18,7 @@ Write each from the [agent template](../../agents/agent-template.md); they follo
 
 ## Interaction with core
 
-These agents plug into the same [orchestration kernel](../../orchestration/README.md); the
-[AI Evaluation Agent](../../ai/evaluation-and-testing.md) gates model/prompt changes alongside the core
-[Reviewer](../../orchestration/reviewer.md), and model degradation is handled by the core
-[AI model degradation playbook](../../post-launch/playbooks/ai-model-degradation.md).
+These agents plug into the same [orchestration kernel](../../ai/orchestration/README.md); the
+[AI Evaluation Agent](../../handbook/departments/ai-engineering/evaluation-and-testing.md) gates model/prompt changes alongside the core
+[Reviewer](../../ai/orchestration/reviewer.md), and model degradation is handled by the core
+[AI model degradation playbook](../../handbook/departments/post-launch/playbooks/ai-model-degradation.md).

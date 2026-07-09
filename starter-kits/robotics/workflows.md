@@ -1,6 +1,6 @@
 # Robotics - Added Workflow
 
-Layered on top of the core [SDLC](../../workflows/sdlc.md), this domain adds:
+Layered on top of the core [SDLC](../../handbook/workflows/sdlc.md), this domain adds:
 
 ```
 Requirements (incl. safety envelope) -> hardware + firmware design
@@ -11,7 +11,7 @@ Requirements (incl. safety envelope) -> hardware + firmware design
 
 ## How it maps to core
 
-- Hardware and firmware use [hardware](../../hardware/README.md).
-- Perception/control use [ai](../../ai/README.md) with sim + HIL evaluation.
-- Field operations use [post-launch](../../post-launch/README.md) (fleet health, OTA, [incident response](../../post-launch/incident-response.md)).
-- Safety and security use [security](../../security/README.md) and the hardware safety gate.
+- Hardware and firmware use [hardware](../../handbook/departments/hardware/README.md).
+- Perception/control use [ai](../../handbook/departments/ai-engineering/README.md) with sim + HIL evaluation.
+- Field operations use [post-launch](../../handbook/departments/post-launch/README.md) (fleet health, OTA, [incident response](../../handbook/departments/post-launch/incident-response.md)).
+- Safety and security use [security](../../handbook/departments/security/README.md) and the hardware safety gate.

@@ -1,37 +1,33 @@
-# AI Engineering
+# AI — the machine side
 
-AI is treated as an engineering discipline, not prompt-writing. This department owns the standards, evaluation, and security for building reliable intelligent systems. The multi-agent orchestration and memory live in [orchestration/](../orchestration/) and [memory/](../memory/); this department covers AI-specific engineering. It reports to the [CTO](../company/roles.md) with scientific validation from the [Chief Scientist](../company/roles.md).
+**Everything the AI agent workforce runs on.** This is not reading material about AI; it is the
+operational specification of the agents themselves, how they are coordinated, and what they remember.
+
+The human side lives in [handbook/](../handbook/README.md). Note the distinction:
+
+- **`ai/`** (here) — the AI *workforce*: who the agents are, how work is routed, reviewed, approved, and remembered.
+- **[handbook/departments/ai-engineering/](../handbook/departments/ai-engineering/README.md)** — the *discipline* of building AI products (RAG, evaluation, prompt standards, AI security). That's reading material.
 
 ## Index
 
-| File | Purpose |
-|---|---|
-| [mission.md](mission.md) | Why this department exists |
-| [vision.md](vision.md) | Where it is going |
-| [principles.md](principles.md) | Non-negotiable operating principles |
-| [organization.md](organization.md) | Structure, reporting lines, interfaces |
-| [roles.md](roles.md) | Human + AI roles and accountabilities |
-| [agents.md](agents.md) | AI agents operating here |
-| [workflows.md](workflows.md) | Core repeatable processes |
-| [playbooks.md](playbooks.md) | Situational step-by-step guides |
-| [sops.md](sops.md) | Standard operating procedures |
-| [decision-frameworks.md](decision-frameworks.md) | How decisions are made |
-| [standards.md](standards.md) | Department-specific standards |
-| [review-process.md](review-process.md) | How work is reviewed |
-| [quality-gates.md](quality-gates.md) | What must pass before work progresses |
-| [automation.md](automation.md) | What is automated |
-| [metrics.md](metrics.md) | What is measured |
-| [dashboards.md](dashboards.md) | How metrics are surfaced |
-| [tools.md](tools.md) | Tooling used |
+| Area | What's inside | Customize? |
+|---|---|---|
+| [agents/](agents/README.md) | The registry of **93 agent specs**, one folder per department, all following the [standard 11-section spec](agents/agent-template.md) | ✏️ **Always** — activate/remove/add agents |
+| [orchestration/](orchestration/README.md) | The kernel — [CEO agent](orchestration/ceo-agent.md) · [planner](orchestration/planner.md) · [task decomposer](orchestration/task-decomposer.md) · [coordinator](orchestration/coordinator.md) · [reviewers](orchestration/reviewer.md) · [approval](orchestration/approval-engine.md)/[execution](orchestration/execution-engine.md)/[improvement](orchestration/continuous-improvement-engine.md) engines · [lifecycle](orchestration/execution-lifecycle.md) | ⚙️ Sometimes |
+| [memory/](memory/README.md) | 14 memory types (session, project, company, customer, decision, [lessons-learned](memory/lessons-learned.md), [prompt](memory/prompt-memory.md), [knowledge-base](memory/knowledge-base.md)…) + [retrieval](memory/retrieval.md) · [retention & versioning](memory/retention-and-versioning.md) | ⚙️ Sometimes |
 
+## How it connects to the handbook
 
-### Domain deep-dives
-- [design-principles.md](design-principles.md) - the eight must-haves of any AI system
-- [prompt-engineering.md](prompt-engineering.md) - prompt standards and versioning
-- [evaluation-and-testing.md](evaluation-and-testing.md) - how models are proven
-- [ai-security.md](ai-security.md) - threats and defenses
-- [Technology readiness (TRL)](../research/technology-readiness.md) - maturity of novel models, from lab to production
+Every department in [handbook/departments/](../handbook/departments/README.md) has a matching agent folder
+here (`ai/agents/<department>/`). The department's `agents.md` indexes them; the agents enforce that
+department's [standards](../handbook/standards/README.md) and pass its
+[quality gates](../handbook/governance/quality-gates.md).
 
-## Interfaces
+## Customizing
 
-AI hands models, prompts, and evaluations to [engineering](../engineering/README.md) for integration; grounding data comes from [data](../data/README.md) and the [knowledge base](../memory/knowledge-base.md); security findings go to [security](../security/README.md); drift is monitored by [post-launch](../post-launch/README.md).
+- **Activate only the agents you need.** Delete the rest — they are specs, not code.
+- **Add an agent:** copy [agents/agent-template.md](agents/agent-template.md) and fill in all 11 sections.
+- **Keep the kernel.** `orchestration/` and `memory/` are the framework; change them only if you are
+  changing how work is routed or remembered.
+
+See [CUSTOMIZE.md](../CUSTOMIZE.md).
