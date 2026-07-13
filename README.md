@@ -13,7 +13,7 @@ It is **industry-agnostic** and **modular**. Nothing assumes a specific business
 is a self-contained miniature operating manual that follows the same structure, so the system is
 predictable, extensible, and repeatable.
 
-**Scale:** 20 full departments · 93 AI agents · 11 starter kits · every folder self-indexes via its own `README.md`.
+**Scale:** an [AI C-suite](ai/agents/executive/README.md) · 20 full departments · 107 AI agents · 16 starter kits · every folder self-indexes via its own `README.md`.
 
 ---
 
@@ -23,7 +23,7 @@ The repository is split down the middle. Know which side you're on and customiza
 
 | | [handbook/](handbook/README.md) — what humans **read** | [ai/](ai/README.md) — what the AI **runs on** |
 |---|---|---|
-| **Contains** | Company identity, governance, 20 department manuals, workflows, standards, playbooks, templates, guides | 93 agent specs, the orchestration kernel, the memory system |
+| **Contains** | Company identity, governance, 20 department manuals, workflows, standards, playbooks, templates, guides | 107 agent specs (an executive C-suite + 20 divisions), the orchestration kernel, the memory system |
 | **You edit it to** | Describe how *your* company works | Change which agents exist and how work is routed |
 | **Audience** | Founders, employees, new hires | The agent workforce |
 
@@ -106,8 +106,11 @@ company-os/
 │   └── guides/                    company-building-guide · onboarding-paths · okrs · example-company
 │
 ├── ai/                        ◀── EVERYTHING THE AI RUNS ON ──────────────────
-│   ├── agents/                    93 agent specs, one folder per department
+│   ├── agents/                    107 agent specs
+│   │   ├── executive/             the C-suite: AI Co-Founder · CTO · CPO · COO · CFO · CMO · CRO
+│   │   │                          Chief Designer/Scientist/Data/Security/Legal/People · Chief of Staff
 │   │   └── engineering/ product/ post-launch/ design/ research/ ai-engineering/ …
+│   │                              one folder per department, each reporting to its executive
 │   ├── orchestration/             the kernel: CEO agent, planner, engines, reviewers
 │   └── memory/                    14 memory types + retrieval, retention, versioning
 │
@@ -207,7 +210,8 @@ Full index: **[ai/README.md](ai/README.md)**
 
 | Area | What's inside |
 |---|---|
-| [agents/](ai/agents/README.md) | The registry of **93 agent specs** (one folder per department) + the [standard 11-section spec](ai/agents/agent-template.md) |
+| [agents/](ai/agents/README.md) | The registry of **107 agent specs** + the [standard 11-section spec](ai/agents/agent-template.md) |
+| [agents/executive/](ai/agents/executive/README.md) | The **AI C-suite** — [AI Co-Founder](ai/agents/executive/ai-cofounder-agent.md) · [CTO](ai/agents/executive/cto-agent.md) · [CPO](ai/agents/executive/cpo-agent.md) · [COO](ai/agents/executive/coo-agent.md) · [CFO](ai/agents/executive/cfo-agent.md) · [CRO](ai/agents/executive/cro-agent.md) · [CMO](ai/agents/executive/cmo-agent.md) · [Chief Designer](ai/agents/executive/chief-designer-agent.md) · [Chief Scientist](ai/agents/executive/chief-scientist-agent.md) · [CDO](ai/agents/executive/chief-data-officer-agent.md) · [CSO](ai/agents/executive/chief-security-officer-agent.md) · [CLO](ai/agents/executive/chief-legal-officer-agent.md) · [CPeO](ai/agents/executive/chief-people-officer-agent.md) · [Chief of Staff](ai/agents/executive/chief-of-staff-agent.md) |
 | [orchestration/](ai/orchestration/README.md) | [CEO agent](ai/orchestration/ceo-agent.md) · [planner](ai/orchestration/planner.md) · [task decomposer](ai/orchestration/task-decomposer.md) · [coordinator](ai/orchestration/coordinator.md) · [reviewer](ai/orchestration/reviewer.md) · [QA](ai/orchestration/qa-reviewer.md)/[security](ai/orchestration/security-reviewer.md)/[docs](ai/orchestration/documentation-reviewer.md) reviewers · [approval](ai/orchestration/approval-engine.md)/[execution](ai/orchestration/execution-engine.md)/[improvement](ai/orchestration/continuous-improvement-engine.md) engines · [lifecycle](ai/orchestration/execution-lifecycle.md) |
 | [memory/](ai/memory/README.md) | 14 memory types (session → company, project, customer, decision, [lessons-learned](ai/memory/lessons-learned.md), [prompt](ai/memory/prompt-memory.md), [knowledge base](ai/memory/knowledge-base.md)…) + [context](ai/memory/context-management.md) · [retrieval](ai/memory/retrieval.md) · [retention & versioning](ai/memory/retention-and-versioning.md) |
 

@@ -9,30 +9,54 @@ Every agent is defined by the [standard agent spec](agent-template.md) — 11 se
 ## Agent hierarchy
 
 ```
-CEO Agent
-├── Orchestration (the kernel)
-├── Research Division
-├── Product Division
-├── Business Division
-├── Design Division
-├── Engineering Division
-├── AI Division
-├── Hardware Division
-├── Security Division
-├── DevOps Division
-├── Data Division
-├── Documentation Division
-├── Marketing Division
-├── Sales Division
-├── Finance Division
-├── Legal Division
-├── Investor Relations
-└── Post-Launch / Maintenance Division
+Human Founder
+└── AI Co-Founder ─────────────── direction & judgment; the one-way doors
+    └── CEO Agent ─────────────── orchestration; delegates, never implements
+        ├── Orchestration (the kernel)
+        │
+        ├── Executive Division ── the C-suite: CTO · CPO · COO · CFO · CMO · CRO
+        │                         Chief Designer · Chief Scientist · CDO · CSO · CLO · CPeO
+        │                         Chief of Staff
+        │
+        ├── Research Division ──────── Chief Scientist
+        ├── Product Division ───────── CPO
+        ├── Documentation Division ─── CPO
+        ├── Design Division ────────── Chief Designer
+        ├── Engineering Division ───── CTO
+        ├── AI Division ────────────── CTO
+        ├── Hardware Division ──────── CTO
+        ├── DevOps Division ────────── CTO
+        ├── Post-Launch Division ───── CTO
+        ├── Data Division ──────────── CDO
+        ├── Security Division ──────── CSO
+        ├── Legal Division ─────────── CLO
+        ├── People / HR Division ───── CPeO
+        ├── Operations Division ────── COO
+        ├── Marketing Division ─────── CMO
+        ├── Sales Division ─────────── CRO
+        ├── Customer Success ───────── CRO
+        ├── Finance Division ───────── CFO
+        ├── Investor Relations ─────── CFO
+        └── Business / Strategy ────── AI Co-Founder
 ```
+
+Each division is owned by an [executive](executive/README.md) who sets its direction and quality bar.
+That is what the **Reports to:** line on every specialist spec below points at.
 
 ## Registry
 
 Legend: ✅ spec written · 🧭 planned (write from the [template](agent-template.md)).
+
+### Executive Division (the C-suite) → [executive/](executive/)
+[AI Co-Founder](executive/ai-cofounder-agent.md) ✅ · [Chief of Staff](executive/chief-of-staff-agent.md) ✅ ·
+[CTO](executive/cto-agent.md) ✅ · [CPO](executive/cpo-agent.md) ✅ · [COO](executive/coo-agent.md) ✅ ·
+[CFO](executive/cfo-agent.md) ✅ · [CRO](executive/cro-agent.md) ✅ · [CMO](executive/cmo-agent.md) ✅ ·
+[Chief Designer](executive/chief-designer-agent.md) ✅ · [Chief Scientist](executive/chief-scientist-agent.md) ✅ ·
+[Chief Data Officer](executive/chief-data-officer-agent.md) ✅ · [Chief Security Officer](executive/chief-security-officer-agent.md) ✅ ·
+[Chief Legal Officer](executive/chief-legal-officer-agent.md) ✅ · [Chief People Officer](executive/chief-people-officer-agent.md) ✅
+
+> The **CEO Agent** is an executive too, but its spec lives in the [kernel](../orchestration/ceo-agent.md)
+> — orchestrating the company *is* the CEO's job, so the role and the orchestrator are the same agent.
 
 ### Orchestration (kernel)
 [CEO Agent](../orchestration/ceo-agent.md) ✅ · [Planner](../orchestration/planner.md) ✅ ·
@@ -130,4 +154,5 @@ Every agent must:
 10. Recommend next actions.
 
 **No agent operates independently on major decisions.** Strategic work requires cross-functional
-review before approval by the [CEO Agent](../orchestration/ceo-agent.md).
+review before approval by the [CEO Agent](../orchestration/ceo-agent.md), and anything irreversible
+goes to the human founder via the [AI Co-Founder](executive/ai-cofounder-agent.md).

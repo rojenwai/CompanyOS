@@ -3,6 +3,33 @@
 All notable changes to Company OS. The format is based on [Keep a Changelog](https://keepachangelog.com);
 Company OS uses date-based versions since it is a living framework, not shipped software.
 
+## [2.3] - 2026-07 — the executive layer
+
+### Added
+- **[ai/agents/executive/](ai/agents/executive/README.md)** — the AI C-suite (14 new specs, 107 total).
+  Until now department agents reported to a "CTO" that existed only as prose in
+  [roles.md](handbook/company/roles.md); now every executive is a real agent that owns named divisions.
+  - **[AI Co-Founder](ai/agents/executive/ai-cofounder-agent.md)** — the founder's counterpart. Owns the
+    thesis, the one-way doors, and the standing case *against* the current plan. Distinct from the
+    [CEO Agent](ai/orchestration/ceo-agent.md), which orchestrates execution: the Co-Founder decides
+    what is worth executing.
+  - [CTO](ai/agents/executive/cto-agent.md) · [CPO](ai/agents/executive/cpo-agent.md) ·
+    [COO](ai/agents/executive/coo-agent.md) · [CFO](ai/agents/executive/cfo-agent.md) ·
+    [CRO](ai/agents/executive/cro-agent.md) · [CMO](ai/agents/executive/cmo-agent.md) ·
+    [Chief Designer](ai/agents/executive/chief-designer-agent.md) ·
+    [Chief Scientist](ai/agents/executive/chief-scientist-agent.md) ·
+    [CDO](ai/agents/executive/chief-data-officer-agent.md) ·
+    [CSO](ai/agents/executive/chief-security-officer-agent.md) ·
+    [CLO](ai/agents/executive/chief-legal-officer-agent.md) ·
+    [CPeO](ai/agents/executive/chief-people-officer-agent.md) ·
+    [Chief of Staff](ai/agents/executive/chief-of-staff-agent.md).
+- **Three hard blocks** no agent may override — security (known-exploitable work), legal (unlawful
+  action), and money (no agent commits funds). Only the human founder can waive them, in writing.
+
+### Changed
+- [handbook/company/roles.md](handbook/company/roles.md) and [structure.md](handbook/company/structure.md)
+  now map every executive to the divisions it owns, and state the four things that always stay human.
+
 ## [2.2] - 2026-07 — roadmap complete
 
 ### Added

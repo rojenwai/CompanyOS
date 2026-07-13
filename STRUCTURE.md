@@ -29,7 +29,10 @@ company-os (repository root)
 │   └── guides/              Company-Building Guide, onboarding paths, OKRs, worked example
 │
 ├── ai/                  ◀── THE MACHINE SIDE (the agent workforce)
-│   ├── agents/              AI agent registry (93 specs) + the standard agent specification
+│   ├── agents/              AI agent registry (107 specs) + the standard agent specification
+│   │                          executive/  the C-suite: AI Co-Founder, CTO, CPO, COO, CFO, CMO, CRO,
+│   │                                      Chief Designer/Scientist/Data/Security/Legal/People, Chief of Staff
+│   │                          + one folder per department, agents reporting to their executive
 │   ├── orchestration/       The kernel: CEO agent, planner, engines, execution lifecycle
 │   └── memory/              Memory architecture: types, retrieval, retention, versioning
 │

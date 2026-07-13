@@ -1,8 +1,8 @@
 # Roadmap
 
 **The roadmap is complete.** Every direction previously listed has been built. Company OS is a finished,
-self-verifying framework: 20 departments, 93 agents, 16 starter kits, 17 document templates, 11 playbooks,
-the guides, the scaffolding CLI, and three CI checks.
+self-verifying framework: an executive C-suite, 20 departments, 107 agents, 16 starter kits, 17 document
+templates, 11 playbooks, the guides, the scaffolding CLI, and three CI checks.
 
 This page now records what exists and how to extend it.
 
@@ -22,7 +22,8 @@ This page now records what exists and how to extend it.
 - **Worked examples** — every department ships at least one; several ship two (ADR + RFC, PRD + user stories, discovery notes + objection handling, scorecard + interview debrief, runway model + budget variance).
 
 ### ai/ — the machine side
-- **93 agent specifications** across 20 divisions, each following the 11-section [standard spec](ai/agents/agent-template.md), each division self-indexed.
+- **107 agent specifications** across 21 divisions, each following the 11-section [standard spec](ai/agents/agent-template.md), each division self-indexed.
+- **[The executive division](ai/agents/executive/README.md)** — the AI C-suite: [AI Co-Founder](ai/agents/executive/ai-cofounder-agent.md), CTO, CPO, COO, CFO, CRO, CMO, Chief Designer, Chief Scientist, CDO, CSO, CLO, CPeO, Chief of Staff. Every specialist agent reports to one of them.
 - **Orchestration kernel** — [CEO agent](ai/orchestration/ceo-agent.md), planner, task decomposer, coordinator, four reviewers, approval/execution/improvement engines, execution lifecycle.
 - **Memory system** — 14 memory types plus retrieval, retention, and versioning.
 
