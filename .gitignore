@@ -23,3 +23,15 @@ dist/
 build/
 coverage/
 *.log
+
+# Python / runtime
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Runtime traces and run records
+.companyos/
+companyos.json

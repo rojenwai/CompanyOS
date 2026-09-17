@@ -28,3 +28,24 @@ jobs:
 
       - name: Verify authoring conventions
         run: python scripts/check-conventions.py
+
+  runtime-tests:
+    name: Runtime test suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The runtime has no dependencies and its tests mock the LLM provider,
+      # so there is nothing to install and no API key is required.
+      - name: Run the orchestration runtime tests
+        run: python runtime/run_tests.py
+
+      - name: Verify the runtime can discover the agent specs
+        run: python -m companyos doctor
+        working-directory: runtime

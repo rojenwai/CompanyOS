@@ -4,6 +4,11 @@ Orchestration is how Company OS turns a request into coordinated, reviewed, appr
 work across a workforce of specialized [agents](../agents/README.md). No agent works alone on major
 decisions; the kernel is what makes many narrow experts behave like one reliable organization.
 
+> **This kernel is executable.** The pages below specify the behaviour; [runtime.md](runtime.md)
+> points at the code that performs it — selecting agents for a request, spawning temporary instances
+> of them, running independent work in parallel, reviewing it, and synthesizing the result.
+> Run it with `python -m companyos run "<your request>"`.
+
 ---
 
 ## The orchestration model
@@ -64,6 +69,7 @@ Continuous Improvement Engine ──► captures lessons → Memory
 | [continuous-improvement-engine.md](continuous-improvement-engine.md) | Turns outcomes into lessons |
 | [task-routing.md](task-routing.md) | How subtasks map to agents |
 | [execution-lifecycle.md](execution-lifecycle.md) | Delegation, conflict resolution, retry logic, lifecycle states |
+| [runtime.md](runtime.md) | The executable kernel: agent **definitions** vs. running **instances** |
 
 The engines enforce [governance](../../handbook/governance/): the [decision framework](../../handbook/governance/decision-framework.md),
 [quality gates](../../handbook/governance/quality-gates.md), and [definition of done](../../handbook/governance/definition-of-done.md).

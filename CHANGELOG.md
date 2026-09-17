@@ -3,6 +3,50 @@
 All notable changes to Company OS. The format is based on [Keep a Changelog](https://keepachangelog.com);
 Company OS uses date-based versions since it is a living framework, not shipped software.
 
+## [3.0] - 2026-09 — the runtime
+
+Company OS stops being only a specification. The agent specs are now executed.
+
+### Added
+- **[runtime/](runtime/README.md)** — a dependency-free Python package that reads the
+  [agent specs](ai/agents/README.md) and orchestrates them for a request:
+  plan → decompose → select → spawn → execute in parallel → aggregate → review → synthesize.
+  ```bash
+  python -m companyos run "Design and implement authentication for a web application."
+  ```
+- **[ai/orchestration/runtime.md](ai/orchestration/runtime.md)** — the distinction the runtime rests
+  on: an **agent definition** is a template in `ai/agents/`; an **agent instance** is a temporary
+  agent handling one task. A run instantiates only the agents it needs, then terminates them. There
+  are never 107 agents running.
+- **Agent Registry** — discovers all 117 definitions (107 specs + the kernel agents) by parsing their
+  Markdown. Capabilities, division, reporting line, and tool grants are derived from each spec's own
+  text, so **adding an agent needs no code** — write the 11-section spec and it becomes selectable.
+- **Capability-based selection** — scored against the registry rather than routed through a hardcoded
+  table, with `python -m companyos select` to inspect why an agent won.
+- **Parallel execution** — independent subtasks run concurrently; dependent ones cannot. A failed
+  branch skips only its own dependents, and the gap is stated in the answer rather than hidden.
+- **Reviewer loop** — the [reviewer](ai/orchestration/reviewer.md),
+  [QA](ai/orchestration/qa-reviewer.md), [security](ai/orchestration/security-reviewer.md), and
+  [documentation](ai/orchestration/documentation-reviewer.md) agents run in parallel over the results;
+  rejected work returns to its author with the findings attached. A Security Reviewer block sets the
+  run to `AWAITING_APPROVAL` and is never auto-cleared, per the
+  [approval engine](ai/orchestration/approval-engine.md).
+- **Agent Map** — the live execution graph as JSON (`--map`), ready for a UI, plus a terminal renderer.
+- **Provider abstraction** — Anthropic, OpenAI, any OpenAI-compatible local server, and an offline
+  deterministic mock. No vendor SDK, no orchestration code aware of the provider.
+- **Safeguards** — caps on spawned agents, task depth, review iterations, concurrency, attempts,
+  timeouts, tokens, tool calls, and context size. Each enforced in code and covered by a test.
+- **Tool boundaries** — default-deny. Spawned agents get no shell, no network, and no filesystem
+  writes; reads are sandboxed to the spec tree; memory writes are proposals, never direct.
+- **220 tests** (`python runtime/run_tests.py`) — stdlib `unittest`, mocked providers, no API keys.
+  Added as a second CI job alongside the documentation checks.
+
+### Changed
+- [ai/orchestration/README.md](ai/orchestration/README.md), [ai/README.md](ai/README.md),
+  [README.md](README.md), and [STRUCTURE.md](STRUCTURE.md) now point at the runtime and explain the
+  `ai/` (specification) versus `runtime/` (implementation) split.
+- No agent spec, memory document, or governance rule was modified. The runtime reads them as they are.
+
 ## [2.3] - 2026-07 — the executive layer
 
 ### Added

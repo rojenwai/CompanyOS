@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "companyos-runtime"
+version = "0.1.0"
+description = "Dynamic multi-agent orchestration runtime over the CompanyOS agent specifications."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["agents", "orchestration", "multi-agent", "llm", "companyos"]
+
+# No required dependencies. Providers speak HTTP through the standard library,
+# so the runtime clones and runs with nothing installed.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+companyos = "companyos.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["companyos*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

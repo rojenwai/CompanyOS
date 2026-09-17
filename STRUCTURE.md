@@ -36,6 +36,11 @@ company-os (repository root)
 │   ├── orchestration/       The kernel: CEO agent, planner, engines, execution lifecycle
 │   └── memory/              Memory architecture: types, retrieval, retention, versioning
 │
+├── runtime/             ◀── THE KERNEL, EXECUTABLE (Python, no dependencies)
+│   ├── companyos/           Registry, planner, decomposer, selector, spawner, scheduler,
+│   │                        reviewer, synthesizer, agent map, providers, tools, memory
+│   └── tests/               Test suite (stdlib unittest; mocked providers, no API calls)
+│
 ├── starter-kits/        Preconfigured company types that inherit core Company OS
 ├── scripts/             Repo tooling (link + structure checkers, run in CI)
 ├── .github/             Community health files + CI workflows
@@ -53,6 +58,11 @@ The repository root **is** Company OS — there is no redundant `company-os/` ne
 
 **Naming note:** `ai/` is the AI *workforce* (agents, orchestration, memory). The *discipline* of
 building AI products is a department: `handbook/departments/ai-engineering/`.
+
+**`ai/` vs `runtime/`:** `ai/` is the specification — what each agent is and how work should be
+routed, reviewed, and remembered. `runtime/` is the implementation that reads those specs and runs
+them. The specs are the source of truth; the runtime parses them and never rewrites them, so a new
+agent is added by writing Markdown, not code. See [ai/orchestration/runtime.md](ai/orchestration/runtime.md).
 
 ---
 

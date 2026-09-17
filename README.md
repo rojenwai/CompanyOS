@@ -2,7 +2,7 @@
 
 > **The open-source operating system for AI-native technology companies.**
 >
-> Version: 2.1 · Clone it, customize it, and run a company from idea to global scale.
+> Version: 3.0 · Clone it, customize it, and run a company from idea to global scale.
 
 Company OS is not a prompt repository, a code template, or a business plan. It is the **central
 source of truth** for how an AI-native company operates: organizational structure, engineering
@@ -15,6 +15,8 @@ predictable, extensible, and repeatable.
 
 **Scale:** an [AI C-suite](ai/agents/executive/README.md) · 20 full departments · 107 AI agents · 16 starter kits · every folder self-indexes via its own `README.md`.
 
+**And it runs.** The [runtime](runtime/README.md) orchestrates those agents for real — see below.
+
 ---
 
 ## Two sides, so it's easy to customize
@@ -26,6 +28,39 @@ The repository is split down the middle. Know which side you're on and customiza
 | **Contains** | Company identity, governance, 20 department manuals, workflows, standards, playbooks, templates, guides | 107 agent specs (an executive C-suite + 20 divisions), the orchestration kernel, the memory system |
 | **You edit it to** | Describe how *your* company works | Change which agents exist and how work is routed |
 | **Audience** | Founders, employees, new hires | The agent workforce |
+
+And a third piece that *executes* the second one: [runtime/](runtime/README.md).
+
+---
+
+## The agents actually run
+
+The [runtime](runtime/README.md) reads the agent specs in [ai/agents/](ai/agents/README.md) and
+orchestrates them. It selects the agents a request needs, spawns temporary instances of only those,
+runs independent work in parallel, reviews it, and synthesizes the result. No dependencies, and no
+API key required to try it:
+
+```bash
+python -m companyos run "Design and implement authentication for a web application."
+```
+
+```
+CEO Agent
+|-- Planner
+|   `-- Task Decomposer
+|       |-- Software Architect Agent                    [delegated]
+|       |   |-- Backend Engineer Agent                       [done]
+|       |   |-- Frontend Engineer Agent                      [done]
+|       |   `-- API Architect Agent                          [done]
+|       `-- Chief Security Officer Agent                [delegated]
+|           `-- Security Architect Agent                     [done]
+|-- Review panel (3)                                      [approve]
+`-- CEO Agent                                                [done]
+```
+
+The 107 specs are **definitions** — templates. A run instantiates only the handful it needs and
+terminates them when the work is done; there are never 107 agents running. See
+[ai/orchestration/runtime.md](ai/orchestration/runtime.md).
 
 ---
 
@@ -70,9 +105,10 @@ match how strict you want to be.
 python scripts/check-links.py        # every internal link resolves
 python scripts/check-structure.py    # departments + agent specs conform
 python scripts/check-conventions.py  # README per folder, no placeholder text
+python runtime/run_tests.py          # the runtime still orchestrates your agents
 ```
 
-All three run in CI on every push and PR. If you removed a department, `check-links.py` points you at every
+All four run in CI on every push and PR. If you removed a department, `check-links.py` points you at every
 link that still references it.
 
 👉 Full detail, including how to add a department or agent by hand: **[CUSTOMIZE.md](CUSTOMIZE.md)**.
@@ -114,11 +150,17 @@ company-os/
 │   ├── orchestration/             the kernel: CEO agent, planner, engines, reviewers
 │   └── memory/                    14 memory types + retrieval, retention, versioning
 │
+├── runtime/                   ◀── THE KERNEL, EXECUTABLE ──────────────────────
+│   ├── companyos/                 registry · planner · decomposer · selector · spawner
+│   │                              scheduler · reviewer · synthesizer · agent map
+│   │                              providers (anthropic · openai · local · mock) · tools · memory
+│   └── tests/                     220 tests, stdlib only, no API keys needed
+│
 ├── starter-kits/              ◀── PICK YOUR COMPANY TYPE ────────────────────
 │   └── ai-startup/ saas/ developer-tools/ enterprise-b2b/ marketplace/
 │       consumer-app/ robotics/ drone/ embedded/ iot/ research-lab/
 │
-├── scripts/                       CI tooling: check-links.py, check-structure.py
+├── scripts/                       doc CI tooling: check-links.py, check-structure.py
 ├── .github/                       issue/PR templates, community health, CI workflows
 │
 └── README.md  CUSTOMIZE.md  STRUCTURE.md  GLOSSARY.md
